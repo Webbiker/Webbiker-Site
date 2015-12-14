@@ -1,0 +1,35 @@
+FOOTER { background:url(/assets/img/footer/footer_bground.jpg) top repeat-x #80a997; height:245px; padding-top:20px; position: absolute; left: 0px; bottom: 0px; width: 100%; display: block; z-index: 999; }
+FOOTER SECTION { float:left; width:219px; padding:18px 0 0 0; margin-right:28px; color:#FFF; }
+FOOTER H1 { color:#FFF; -webkit-text-fill-color:#FFF; -webkit-text-shadow:1px 1px 1px #444; text-shadow:1px 1px 1px #444; }
+FOOTER P { margin:8px 0; }
+FOOTER A:link, FOOTER A:active, FOOTER A:visited { color:#ffcc00; text-decoration:none; font-family: droid_sansregular, sans-serif; }
+FOOTER A:hover { color:#ffcc00; text-decoration:underline; }
+FOOTER B { display:inline-block; width:80px; }
+
+FOOTER UL { margin:0; padding:0; }
+FOOTER LI { list-style:none; width:40px; height:41px; float:left; margin:0 1px 1px 0; }
+FOOTER LI A { text-indent:-9000px; width:40px; height:41px; background:url(/assets/img/footer/icons.png) no-repeat; display:block; overflow:hidden; }
+FOOTER .twitter-icon	{ background-position:0px 0px; }
+FOOTER .facebook-icon	{ background-position:-40px 0px; }
+FOOTER .vimeo-icon		{ background-position:-80px 0px; }
+FOOTER .youtube-icon	{ background-position:-120px 0px; }
+FOOTER .flickr-icon		{ background-position:-160px 0px; }
+FOOTER .github-icon		{ background-position:0px -41px; }
+FOOTER .spotify-icon	{ background-position:-40px -41px; }
+FOOTER .behance-icon	{ background-position:-80px -41px; }
+FOOTER .linkedin-icon	{ background-position:-120px -41px; }
+FOOTER .skype-icon		{ background-position:-160px -41px; }
+
+FOOTER .tools LI { height:44px; width:42px; margin:0 8px 8px 0; }
+FOOTER .tools LI A { height:44px; width:42px; }
+FOOTER .modx-icon		{ background-position:0px -82px; }
+FOOTER .wordpress-icon	{ background-position:-42px -82px; }
+FOOTER .magento-icon	{ background-position:-84px -82px; }
+FOOTER .joomla-icon		{ background-position:-126px -82px; }
+FOOTER .jquery-icon		{ background-position:-168px -82px; }
+FOOTER .html-icon		{ background-position:0px -126px; }
+FOOTER .css-icon		{ background-position:-42px -126px; }
+
+FOOTER FORM { position:relative; }
+FOOTER INPUT[type=text] { font-family:droid_sansregular, sans-serif; -webkit-border-radius: 8px; border-radius: 8px; -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box; border:0; background:#FFF; padding:0 8px; width:203px; height:30px; outline:none; }
+FOOTER INPUT[type=submit] { background:transparent url(/assets/img/footer/submit_button.png) no-repeat; width:162px; height:40px; color:#FFF; border:0; padding:0 0 4px 20px; font-size:1.2em; font-family:homestead_regularregular, sans-serif; position:absolute; right:-8px; }

@@ -1,0 +1,866 @@
+/*-----------------------------------------------------------------------------------/
+/ Variables
+/-----------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------------/
+/ Mixens
+/-----------------------------------------------------------------------------------*/
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+html,
+button,
+input,
+select,
+textarea {
+  color: #222; }
+
+body {
+  font-size: 1em;
+  line-height: 1.4; }
+
+/*
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate.
+ * Customize the background color to match your design.
+ */
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none; }
+
+/*
+ * A better looking default horizontal rule
+ */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+img {
+  vertical-align: middle; }
+
+/*
+ * Remove default fieldset styles.
+ */
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0; }
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+textarea {
+  resize: vertical; }
+
+/* ==========================================================================
+   Chrome Frame prompt
+   ========================================================================== */
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  border: 0;
+  overflow: hidden;
+  /* IE 6/7 fallback */
+  *text-indent: -9999px; }
+
+.ir:before {
+  content: "";
+  display: block;
+  width: 0;
+  height: 100%; }
+
+/*
+ * Hide from both screenreaders and browsers: h5bp.com/u
+ */
+.hidden {
+  display: none !important;
+  visibility: hidden; }
+
+/*
+ * Hide only visually, but have it available for screenreaders: h5bp.com/v
+ */
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
+
+/*
+ * Extends the .visuallyhidden class to allow the element to be focusable
+ * when navigated to via the keyboard: h5bp.com/p
+ */
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
+
+/*
+ * Hide visually and from screenreaders, but maintain layout
+ */
+.invisible {
+  visibility: hidden; }
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
+
+.clearfix:after {
+  clear: both; }
+
+/*
+ * For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1; }
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+@media only screen and (min-width: 35em) {
+  /* Style adjustments for viewports that meet the condition */ }
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  /* Style adjustments for high resolution devices */ }
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid required HTTP connection: h5bp.com/r
+   ========================================================================== */
+@media print {
+  * {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster: h5bp.com/s */
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  /*
+   * Don't show links for images, or javascript/internal links
+   */
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group;
+    /* h5bp.com/t */ }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; } }
+@font-face {
+  font-family: 'homestead_regularregular';
+  src: url("/assets/fonts/homestead-regular-webfont.eot");
+  src: url("/assets/fonts/homestead-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/homestead-regular-webfont.woff") format("woff"), url("/assets/fonts/homestead-regular-webfont.ttf") format("truetype"), url("/assets/fonts/homestead-regular-webfont.svg#homestead_regularregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'lavanderia_sturdysturdy';
+  src: url("/assets/fonts/lavanderia_sturdy-webfont.eot");
+  src: url("/assets/fonts/lavanderia_sturdy-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/lavanderia_sturdy-webfont.woff") format("woff"), url("/assets/fonts/lavanderia_sturdy-webfont.ttf") format("truetype"), url("/assets/fonts/lavanderia_sturdy-webfont.svg#lavanderia_sturdysturdy") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'droid_sansregular';
+  src: url("/assets/fonts/droidsans-webfont.eot");
+  src: url("/assets/fonts/droidsans-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/droidsans-webfont.woff") format("woff"), url("/assets/fonts/droidsans-webfont.ttf") format("truetype"), url("/assets/fonts/droidsans-webfont.svg#droid_sansregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: 'droid_sansbold';
+  src: url("/assets/fonts/droidsans-bold-webfont.eot");
+  src: url("/assets/fonts/droidsans-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/droidsans-bold-webfont.woff") format("woff"), url("/assets/fonts/droidsans-bold-webfont.ttf") format("truetype"), url("/assets/fonts/droidsans-bold-webfont.svg#droid_sansbold") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+HTML {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden; }
+
+BODY {
+  height: 100%;
+  font-family: droid_sansregular, sans-serif;
+  font-size: 75%;
+  color: #555;
+  line-height: 1.5em; }
+
+H1, H2, H3, H4 {
+  font-family: homestead_regularregular, sans-serif;
+  font-weight: normal; }
+
+H1 {
+  margin: 0 0 8px 0;
+  color: #87a3ac;
+  background: -webkit-gradient(linear, left top, left bottom, from(#aecdd2), to(#87a3ac));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2em;
+  line-height: 1em; }
+
+STRONG, B {
+  font-family: droid_sansbold, sans-serif;
+  font-weight: normal; }
+
+A {
+  color: #80a997;
+  text-decoration: underline;
+  font-family: droid_sansbold, sans-serif; }
+
+A:hover {
+  color: #87a3ac;
+  text-decoration: underline;
+  font-family: droid_sansbold, sans-serif; }
+
+A.bigbutton {
+  width: 132px;
+  height: 44px;
+  padding: 15px 12px 12px 80px;
+  background: url(/assets/img/buttons/big_more.png) no-repeat;
+  z-index: 12;
+  position: absolute;
+  color: #996600;
+  text-decoration: none; }
+
+A.bigbutton SPAN {
+  font-family: homestead_regularregular, sans-serif;
+  font-weight: normal;
+  font-size: 1.2em;
+  line-height: 1.25em;
+  margin: 0;
+  padding: 0; }
+
+A.bigbutton H2 {
+  font-family: droid_sansregular, sans-serif;
+  font-weight: normal;
+  font-size: 0.8em;
+  margin: 0;
+  padding: 0; }
+
+.wrapper {
+  display: block;
+  min-height: 100%;
+  _height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  z-index: 0;
+  margin: 0px auto; }
+
+.main {
+  background: url(/assets/img/default/main_bground_gradient.png) repeat-x top center #FFF;
+  margin-bottom: 265px; }
+
+.bikers {
+  background: url(/assets/img/default/main_bground_bikers.jpg) no-repeat top center;
+  margin-bottom: 293px; }
+
+.ripborder {
+  background: url(/assets/img/default/main_bground_ripborder.png) repeat-x 0 499px; }
+
+.headerContent, .footerContent {
+  width: 960px;
+  margin: 0 auto; }
+
+.mainContent {
+  width: 880px;
+  min-height: 334px;
+  /* padding: 0 8px; */
+  padding: 51px 51px 0  51px;
+  margin: 0 auto;
+  background: url(/assets/img/default/content_bground.png) no-repeat top center; }
+
+.home .mainContent {
+  width: 974px;
+  margin: 0 auto;
+  background: none; }
+
+/* tooltip */
+.tooltip {
+  display: none;
+  background: transparent url(/assets/img/default/tooltip_bground.png) no-repeat;
+  height: 33px;
+  width: 184px;
+  text-align: center;
+  overflow: hidden;
+  padding: 6px 8px 0 8px;
+  color: #960;
+  font-family: droid_sansbold, sans-serif;
+  font-weight: normal;
+  font-size: 1em; }
+  .tooltip .bottom {
+    background: url(/assets/img/default/tooltip_bground.png) no-repeat 0 -39px;
+    padding: 12px 8px 0 8px;
+    height: 27px; }
+
+.tooltipDown {
+  display: none;
+  background: transparent url(/assets/img/default/tooltip_bground.png) no-repeat 0 -39px;
+  padding: 11px 8px 0 8px;
+  height: 28px;
+  width: 184px;
+  text-align: center;
+  overflow: hidden;
+  color: #960;
+  font-family: droid_sansbold, sans-serif;
+  font-weight: normal;
+  font-size: 1em; }
+
+/* helpers */
+.last {
+  margin-right: 0 !important; }
+
+.clearfix {
+  display: inline-block; }
+  .clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0; }
+
+HEADER {
+  height: 185px;
+  margin-bottom: 40px; }
+
+.home HEADER {
+  height: 585px;
+  margin-bottom: 40px; }
+
+.headerContent {
+  position: relative;
+  height: 160px; }
+
+.headerContent .logo {
+  position: absolute;
+  top: 0;
+  left: -36px;
+  z-index: 10;
+  display: block;
+  width: 268px;
+  height: 191px;
+  background: url(/assets/img/header/logo_shield.png) no-repeat; }
+
+.headerContent .logo SPAN {
+  text-indent: -99999px;
+  display: block;
+  width: 80px;
+  height: 50px;
+  margin: 35px 94px 0 94px;
+  background: url(/assets/img/header/logo_home.png) no-repeat -4px 0px;
+  -webkit-border-radius: 30px;
+  border-radius: 30px; }
+
+.headerContent .logo SPAN SPAN {
+  background: url(/assets/img/header/logo_reflection.png) no-repeat 0px 0px;
+  margin: 0; }
+
+.headerContent NAV {
+  background: url(/assets/img/header/bground_nav.png) no-repeat;
+  width: 720px;
+  height: 40px;
+  padding: 43px 42px;
+  position: absolute;
+  top: 0;
+  right: -42px;
+  z-index: 10; }
+
+.headerContent UL {
+  margin: 0;
+  padding: 0; }
+
+.headerContent UL LI {
+  float: left;
+  margin-right: 2px; }
+
+.headerContent UL LI.last {
+  margin-right: 0; }
+
+.headerContent UL LI A {
+  width: 178px;
+  height: 29px;
+  padding-top: 11px;
+  text-align: center;
+  display: block;
+  background: url(/assets/img/header/bground_nav_buttons.png) no-repeat 0px -40px;
+  color: #FFF;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-family: homestead_regularregular, sans-serif;
+  font-weight: normal;
+  text-shadow: 0px 2px 5px #6a8087; }
+
+.headerContent UL LI.first A {
+  -webkit-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px; }
+
+.headerContent UL LI.last A {
+  -webkit-border-radius: 0 4px 4px 0;
+  border-radius: 0 4px 4px 0; }
+
+FOOTER {
+  background: url(/assets/img/footer/footer_bground.jpg) top repeat-x #80a997;
+  height: 245px;
+  padding-top: 20px;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  display: block;
+  z-index: 999; }
+
+FOOTER SECTION {
+  float: left;
+  width: 219px;
+  padding: 18px 0 0 0;
+  margin-right: 28px;
+  color: #FFF; }
+
+FOOTER H1 {
+  color: #FFF;
+  -webkit-text-fill-color: #FFF;
+  -webkit-text-shadow: 1px 1px 1px #444;
+  text-shadow: 1px 1px 1px #444; }
+
+FOOTER P {
+  margin: 8px 0; }
+
+FOOTER A:link, FOOTER A:active, FOOTER A:visited {
+  color: #ffcc00;
+  text-decoration: none;
+  font-family: droid_sansregular, sans-serif; }
+
+FOOTER A:hover {
+  color: #ffcc00;
+  text-decoration: underline; }
+
+FOOTER B {
+  display: inline-block;
+  width: 80px; }
+
+FOOTER UL {
+  margin: 0;
+  padding: 0; }
+
+FOOTER LI {
+  list-style: none;
+  width: 40px;
+  height: 41px;
+  float: left;
+  margin: 0 1px 1px 0; }
+
+FOOTER LI A {
+  text-indent: -9000px;
+  width: 40px;
+  height: 41px;
+  background: url(/assets/img/footer/icons.png) no-repeat;
+  display: block;
+  overflow: hidden; }
+
+FOOTER .twitter-icon {
+  background-position: 0px 0px; }
+
+FOOTER .facebook-icon {
+  background-position: -40px 0px; }
+
+FOOTER .vimeo-icon {
+  background-position: -80px 0px; }
+
+FOOTER .youtube-icon {
+  background-position: -120px 0px; }
+
+FOOTER .flickr-icon {
+  background-position: -160px 0px; }
+
+FOOTER .github-icon {
+  background-position: 0px -41px; }
+
+FOOTER .spotify-icon {
+  background-position: -40px -41px; }
+
+FOOTER .behance-icon {
+  background-position: -80px -41px; }
+
+FOOTER .linkedin-icon {
+  background-position: -120px -41px; }
+
+FOOTER .skype-icon {
+  background-position: -160px -41px; }
+
+FOOTER .tools LI {
+  height: 44px;
+  width: 42px;
+  margin: 0 8px 8px 0; }
+
+FOOTER .tools LI A {
+  height: 44px;
+  width: 42px; }
+
+FOOTER .modx-icon {
+  background-position: 0px -82px; }
+
+FOOTER .wordpress-icon {
+  background-position: -42px -82px; }
+
+FOOTER .magento-icon {
+  background-position: -84px -82px; }
+
+FOOTER .joomla-icon {
+  background-position: -126px -82px; }
+
+FOOTER .jquery-icon {
+  background-position: -168px -82px; }
+
+FOOTER .html-icon {
+  background-position: 0px -126px; }
+
+FOOTER .css-icon {
+  background-position: -42px -126px; }
+
+FOOTER FORM {
+  position: relative; }
+
+FOOTER INPUT[type=text] {
+  font-family: droid_sansregular, sans-serif;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 0;
+  background: #FFF;
+  padding: 0 8px;
+  width: 203px;
+  height: 30px;
+  outline: none; }
+
+FOOTER INPUT[type=submit] {
+  background: transparent url(/assets/img/footer/submit_button.png) no-repeat;
+  width: 162px;
+  height: 40px;
+  color: #FFF;
+  border: 0;
+  padding: 0 0 4px 20px;
+  font-size: 1.2em;
+  font-family: homestead_regularregular, sans-serif;
+  position: absolute;
+  right: -8px; }
+
+.caroussel {
+  width: 960px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative; }
+  .caroussel .pager {
+    position: absolute;
+    z-index: 100;
+    bottom: -10px;
+    right: 0; }
+    .caroussel .pager #prev {
+      display: block;
+      background: url(/assets/img/buttons/small_previous.png) no-repeat top left;
+      width: 44px;
+      height: 41px;
+      padding: 1px 5px 9px 9px;
+      text-indent: -9999px;
+      float: left; }
+    .caroussel .pager #next {
+      display: block;
+      float: left;
+      padding: 8px;
+      background: url(/assets/img/buttons/small_next.png) no-repeat top right;
+      width: 44px;
+      height: 41px;
+      padding: 1px 9px 9px 5px;
+      text-indent: -9999px; }
+  .caroussel .slide {
+    position: relative;
+    width: 960px;
+    height: 400px; }
+    .caroussel .slide .image {
+      width: 550px;
+      height: 393px;
+      background-repeat: no-repeat;
+      background-position: 37px 14px;
+      z-index: 11;
+      position: absolute;
+      top: 10px;
+      left: -20px; }
+    .caroussel .slide .story {
+      width: 414px;
+      height: 184px;
+      padding: 50px 30px 0 90px;
+      background: url(/assets/img/header/bground_caroussel_cloud.png) no-repeat;
+      z-index: 10;
+      position: absolute;
+      top: 30px;
+      left: 470px; }
+      .caroussel .slide .story H1 {
+        font-family: lavanderia_sturdysturdy, serif;
+        font-size: 3em;
+        font-weight: normal;
+        margin: 0;
+        padding: 18px 4px; }
+      .caroussel .slide .story P {
+        padding: 0;
+        margin: 0 0 8px 0;
+        text-align: center; }
+    .caroussel .slide .bigbutton {
+      bottom: 100px;
+      left: 660px; }
+
+#clouds {
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  z-index: 0;
+  top: 0; }
+  #clouds .clouds {
+    position: relative;
+    width: 100%;
+    height: 400px; }
+  #clouds .cloud-1 {
+    background: url(/assets/img/header/cloud-1.png) no-repeat;
+    width: 572px;
+    height: 261px;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: -30px;
+    left: -100px; }
+  #clouds .cloud-2 {
+    background: url(/assets/img/header/cloud-2.png) no-repeat;
+    width: 391px;
+    height: 191px;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 100px;
+    left: 2300px; }
+  #clouds .cloud-3 {
+    background: url(/assets/img/header/cloud-3.png) no-repeat;
+    width: 475px;
+    height: 182px;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 80px;
+    left: 300px; }
+  #clouds .cloud-4 {
+    background: url(/assets/img/header/cloud-1.png) no-repeat;
+    width: 572px;
+    height: 261px;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 20px;
+    left: 1800px; }
+  #clouds .cloud-5 {
+    background: url(/assets/img/header/cloud-2.png) no-repeat;
+    width: 391px;
+    height: 191px;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: -10px;
+    left: 1400px; }
+  #clouds .cloud-6 {
+    background: url(/assets/img/header/cloud-3.png) no-repeat;
+    width: 475px;
+    height: 182px;
+    display: block;
+    position: absolute;
+    z-index: 0;
+    top: 90px;
+    left: 900px; }
+
+/* services section */
+.services {
+  margin: 0 7px 40px 7px; }
+  .services SECTION {
+    float: left;
+    width: 219px;
+    padding: 18px 0 0 0;
+    margin-right: 28px;
+    background: url(/assets/img/homepage/services_bground.gif) repeat-x top;
+    min-height: 170px;
+    position: relative; }
+    .services SECTION H1 {
+      padding: 0 0 0 32px;
+      position: relative; }
+      .services SECTION H1 SPAN {
+        background: url(/assets/img/default/star_header.png) no-repeat left;
+        display: inline-block;
+        width: 28px;
+        height: 24px;
+        position: absolute;
+        z-index: 10;
+        left: 0;
+        top: -4px; }
+    .services SECTION P {
+      margin: 0 0 8px 0; }
+  .services A.button {
+    color: #FFF;
+    font-family: homestead_regularregular, sans-serif;
+    font-size: 1.2em;
+    text-decoration: none;
+    background: url(/assets/img/homepage/services_button.gif) no-repeat;
+    display: block;
+    width: 102px;
+    height: 33px;
+    padding: 15px 0 0 60px;
+    position: absolute;
+    z-index: 10;
+    bottom: 20px;
+    right: 0; }
+
+/* about section */
+.about {
+  background: url(/assets/img/homepage/about_bground.gif) repeat-x top left;
+  margin: 0 0 0 7px;
+  width: 630px;
+  height: 249px;
+  padding: 18px 0 0 0;
+  position: relative; }
+  .about IMG {
+    position: absolute;
+    right: -10px;
+    top: 20px; }
+  .about A.bigbutton {
+    background: url(/assets/img/buttons/big_about.png) no-repeat;
+    left: 160px;
+    bottom: 0; }
+
+/* contact section */
+.contact {
+  background: url(/assets/img/homepage/contact_bground.png) no-repeat;
+  float: right;
+  height: 425px;
+  width: 271px;
+  padding: 21px 29px 29px 20px;
+  margin-bottom: 30px;
+  position: relative; }
+  .contact H1 {
+    color: #FFF;
+    -webkit-text-fill-color: #FFF;
+    -webkit-text-shadow: 1px 1px 1px #444;
+    text-shadow: 1px 1px 1px #444; }
+  .contact A.bigbutton {
+    bottom: -30px;
+    left: 40px; }
+  .contact IMG {
+    position: absolute;
+    bottom: -5px;
+    right: -25px; }
+
+/* twitter section */
+.twitter {
+  background: url(/assets/img/homepage/twitter_bground.png) no-repeat;
+  margin: 0;
+  width: 587px;
+  height: 128px;
+  padding: 80px 30px 0 30px;
+  margin-bottom: 30px; }
+  .twitter H1 {
+    color: #555;
+    -webkit-text-fill-color: #555; }
+  .twitter TIME {
+    margin: 0 0 0 40px;
+    padding: 0; }
+  .twitter P {
+    margin: 0 0 0 40px;
+    padding: 0;
+    position: relative;
+    font-family: droid_sansbold, sans-serif; }
+  .twitter IMG.qopen {
+    position: absolute;
+    top: -12px;
+    left: -40px; }
+  .twitter IMG.qclose {
+    margin-left: 6px;
+    vertical-align: text-top; }
