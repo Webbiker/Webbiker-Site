@@ -119,7 +119,7 @@ h1, h2, h3, h4 {
 }
 
 h1 {
-    color: $dgreen;
+    color: $xdgreen;
     font-size: rem-calc(36);
 }
 
@@ -129,7 +129,7 @@ h1 {
         padding-right: 20%;
     }
     h2 {
-        color: $dgreen;
+        color: $xdgreen;
         font-size: rem-calc(24);
         line-height: rem-calc(36);
     }
@@ -152,6 +152,20 @@ h1 {
         margin-bottom: 24px;
     }
 
+    blockquote {
+        float: left;
+        font-family: homestead, _sans;
+        font-size: rem-calc(24);
+        margin: 6px 30px 10px 80px;
+        border-top: 4px solid $lgreen;
+        border-bottom: 4px solid $lgreen;
+        padding: 12px 0;
+        text-transform: uppercase;
+        color: $dgreen;
+        max-width: 300px;
+
+    }
+
     // p:first-child,
     strong,
     b {
@@ -162,10 +176,14 @@ h1 {
         font-family: 'sfns_displaybold', _sans;
         border-bottom: 4px solid $dgreen;
         color: $lgreen;
-        font-size: rem-calc(64); //4rem
+        font-size: rem-calc(60); //4rem
+        line-height: rem-calc(58);
         float: left;
-        line-height: 3.3rem;
-        margin-top: 8px;
-        margin-right: 8px;
+        margin: -7px 10px 0px -11px;
+        padding: 10px 10px 0 10px;
+        background: $dgreen;
+        display: block;
+        border-radius: 4px;
+        text-align: center;
       }
 }
