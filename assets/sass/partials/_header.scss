@@ -341,7 +341,7 @@ header {
 }
 
 h1 {
-	margin: 10px auto 80px auto;
+	margin: 10px 20% 80px 20%;
 	padding-left: 120px;
 	max-width: $max-width - 120px;
 	position: relative;
@@ -349,7 +349,7 @@ h1 {
 		width: 100px;
 		height: auto;
 		position: absolute;
-		top: -70px;
+		top: -40px;
 		left:0 ;
 		z-index: 9;
 		border-radius: 999px;

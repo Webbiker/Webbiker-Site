@@ -121,11 +121,16 @@ h1, h2, h3, h4 {
 h1 {
     color: $xdgreen;
     font-size: rem-calc(36);
+    small {
+        display: block;
+        color: $black;
+        font-size: rem-calc(24);
+    }
 }
 
 .main {
     h2, h3, h4, p, ul {
-        padding-left: 120px;
+        padding-left: 20%;
         padding-right: 20%;
     }
     h2 {

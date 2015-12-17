@@ -73,7 +73,11 @@
 
             </header>
 
-            <h1><img src="/assets/img/header/avatar.jpg" alt="Joost Brommert - Webdesigner" class="avatar">Joost Brommert - Webdesigner</h1>
+            <h1>
+                <img src="/assets/img/header/avatar.jpg" alt="Joost Brommert - Webdesigner" class="avatar">
+                Joost Brommert
+                <small>Webdesigner</small>
+            </h1>
                 <!-- <div class="bikers"> -->
                     <!-- <div class="ripborder"> -->
 
