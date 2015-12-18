@@ -337,22 +337,4 @@ header {
 			left:-200%;
 		}
 	}
-
-}
-
-h1 {
-	margin: 10px 20% 80px 20%;
-	padding-left: 120px;
-	max-width: $max-width - 120px;
-	position: relative;
-	.avatar {
-		width: 100px;
-		height: auto;
-		position: absolute;
-		top: -40px;
-		left:0 ;
-		z-index: 9;
-		border-radius: 999px;
-		border: 5px solid $dgreen;
-	}
 }
