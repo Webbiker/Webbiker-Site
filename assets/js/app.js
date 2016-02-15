@@ -8,7 +8,6 @@
 
 			// behaviour of the main navigation on scroll
 			var height = $(window).scrollTop();
-
 			if(height  > 40) {
 				$('header nav').addClass('sticky');
 			} else {
@@ -16,5 +15,4 @@
 			}
 
 		});
-
 	});
