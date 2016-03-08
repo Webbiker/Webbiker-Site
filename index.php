@@ -25,23 +25,25 @@
         <![endif]-->
 
         <div class="wrapper">
-            <header>
-                <nav class="sub-navigation">
-                    <div>                    
-                        <ul class="social">
-                            <li><a href="javascript:;"><svg class="icon icon-twitter"><use xlink:href="/assets/img/gui/sprite.svg#icon-twitter"></use></svg></a></li>
-                            <li><a href="javascript:;"><svg class="icon icon-facebook"><use xlink:href="/assets/img/gui/sprite.svg#icon-facebook"></use></svg></a></li>
-                            <li><a href="javascript:;"><svg class="icon icon-google-plus"><use xlink:href="/assets/img/gui/sprite.svg#icon-google-plus"></use></svg></a></li>
-                            <li><a href="javascript:;"><svg class="icon icon-linkedin"><use xlink:href="/assets/img/gui/sprite.svg#icon-linkedin"></use></svg></a></li>
-                            <li><a href="javascript:;"><svg class="icon icon-skype"><use xlink:href="/assets/img/gui/sprite.svg#icon-skype"></use></svg></a></li>
+            <header class="header">
+                <nav class="submenu">
+                    <div>
+                        <ul class="submenu__mobile">
+                             <li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-menu"></use></svg></a></li>
+                         </ul>     
+                        <ul class="submenu__social">
+                            <li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-twitter"></use></svg></a></li>
+                            <li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-facebook"></use></svg></a></li>
+                            <li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-google-plus"></use></svg></a></li>
+                            <li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-linkedin"></use></svg></a></li>
                         </ul>
-                        <ul class="language">
+                        <ul class="submenu__language">
                             <li><a href="javascript:;" class="active">NL</a></li>
                             <li><a href="javascript:;">EN</a></li>
                         </ul>
                     </div> 
                 </nav>
-                <nav class="main-navigation">
+                <nav class="mainmenu">
                     <ul>
                         <li><a href="javascript:;" class="active">Over Webbiker</a></li>
                         <li><a href="javascript:;">Portfolio</a></li>
@@ -49,28 +51,24 @@
                         <li><a href="javascript:;">Contact</a></li>
                     </ul>
                     <a href="/" class="logo">
-                        <svg viewBox="0 0 229 232" class="logo-shield">
+                        <svg viewBox="0 0 229 232" class="logo__shield">
                             <use xlink:href="/assets/img/gui/sprite.svg#logo-shield"></use>
                         </svg>
-                        <svg viewBox="0 0 138 104" class="logo-bike">
+                        <svg viewBox="0 0 138 104" class="logo__bike">
                             <use xlink:href="/assets/img/gui/sprite.svg#logo-bike"></use>
                         </svg>
-                        <svg viewBox="0 0 357 123" class="logo-text">
+                        <svg viewBox="0 0 357 123" class="logo__text">
                             <use xlink:href="/assets/img/gui/sprite.svg#logo-text"></use>
                         </svg>
-                        <svg viewBox="0 0 229 232" class="logo-shadow">
+                        <svg viewBox="0 0 229 232" class="logo__shadow">
                             <use xlink:href="/assets/img/gui/sprite.svg#logo-shadow"></use>
                     </a>
                 </nav>
-                <?php #include_once('assets/includes/inc.navigation.php'); ?>
-                <?php #include_once('assets/includes/inc.caroussel.php'); ?>
-                <?php #include_once('assets/includes/inc.clouds.php'); ?>
-                <div class="horizon"></div>
 
-                <div class="clouds_one"></div>
-                <div class="clouds_two"></div>
-                <div class="clouds_three"></div>
-
+                <div class="clouds clouds__horizon"></div>
+                <div class="clouds clouds__cloudone"></div>
+                <div class="clouds clouds__cloudtwo"></div>
+                <div class="clouds clouds__cloudthree"></div>
             </header>
 
             <h1>
