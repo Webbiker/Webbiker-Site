@@ -13,11 +13,11 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="apple-touch-icon-precomposed" href="/assets/img/favicon/apple-touch-icon-114x114-precomposed.png" sizes="114x114">
         <link rel="apple-touch-icon-precomposed" href="/assets/img/favicon/apple-touch-icon-72x72-precomposed.png" sizes="72x72">
-        <link rel="apple-touch-icon-precomposed" href="/assets/img/favicon/apple-touch-icon-precomposed.png">
-            
+        <link rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico">
+
         <!-- <link rel="stylesheet" href="/assets/css/default.css"> -->
         <link rel="stylesheet" href="/assets/css/screen.css">
-        <script src="/assets/bower_components/modernizr/modernizr.js"></script>
+        <!-- <script src="/assets/bower_components/modernizr/modernizr.js"></script> -->
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -110,15 +110,15 @@
                     <h4>Lorem ipsum dolor sit amet</h4>
                     <p>Voluptates esse, maiores saepe quis assumenda, eum odio atque consequatur blanditiis minima beatae similique placeat quas velit, quos ad provident commodi dolor eos quibusdam dolorum debitis fuga? Placeat quod, odit fuga quo sequi assumenda magni officia laudantium quam corporis, amet ullam tempora repellat porro architecto nemo eaque nisi laboriosam nam.</p>
                     <p><button>test button</button></p>
-                </section>
-                
-                <!-- footer>
+                </section>        
+                <footer>
                     <div class="footerContent">
                         Footer
                     </div>
-                </footer -->
+                </footer>
             </div>
         </div>
+
 
         <script src="/assets/js/app-min.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -130,4 +130,3 @@
         </script>
     </body>
 </html>
-            <?php #include_once('assets/includes/inc.footer.php'); ?>

@@ -1,7 +1,15 @@
 footer { 
-	height:215px;
-	background: $dgreen;
-	position: relative;
+	height: 40px;
+    background: #80a997;
+    position: relative;
+    padding-top: 20px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    width: 100%;
+    display: block;
+    z-index: 999;
+
 	&:after {	
 		background: url(/assets/img/gui/horizon-drybrush.svg);
 		width: 100%;
@@ -13,20 +21,13 @@ footer {
 	}
 
 
-	padding-top:20px; 
-	position: absolute; 
-	left: 0px; 
-	bottom: 0px; 
-	width: 100%; 
-	display: block; 
-	z-index: 999; 
-	section { 
-		float:left; 
-		width:219px; 
-		padding:18px 0 0 0; 
-		margin-right:28px; 
-		color:#FFF; 
-	}
+	// section { 
+	// 	float:left; 
+	// 	width:219px; 
+	// 	padding:18px 0 0 0; 
+	// 	margin-right:28px; 
+	// 	color:#FFF; 
+	// }
 
 	// h1 { 
 	// 	color:#FFF; 
