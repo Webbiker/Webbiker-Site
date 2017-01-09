@@ -24,79 +24,61 @@
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
 
-        <div class="wrapper">
-            <div class="wrapper__offcanvas">
-                <nav class="offcanvas">
-                    <div class="offcanvas__list">
-                        <a href="javascript:;">Over Webbiker</a>
-                        <a href="javascript:;">Portfolio</a>
-                        <a href="javascript:;">Diensten</a>
-                        <a href="javascript:;">Contact</a>
-                    </div>
-                </nav>
-                <button class="close-button" id="close-button">Close Menu</button>
-                <div class="morph-shape" id="morph-shape" data-morph-open="M-1,0h101c0,0,0-1,0,395c0,404,0,405,0,405H-1V0z">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
-                        <path d="M-1,0h101c0,0-97.833,153.603-97.833,396.167C2.167,627.579,100,800,100,800H-1V0z"/>
-                    </svg>
-                </div>
-            </div>
-
-            <div class="wrapper__content">
-                <header class="header">
-                    <nav class="submenu">
-                        <div>
-                            <ul class="submenu__mobile">
-                                 <li><a href="javascript:;" id="open-button"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-menu"></use></svg></a></li>
-                             </ul>     
-                            <ul class="submenu__social">
-                                <li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-twitter"></use></svg></a></li>
-                                <li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-facebook"></use></svg></a></li>
-                                <li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-google-plus"></use></svg></a></li>
-                                <li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-linkedin"></use></svg></a></li>
-                            </ul>
-                            <ul class="submenu__language">
-                                <li><a href="javascript:;" class="active">NL</a></li>
-                                <li><a href="javascript:;">EN</a></li>
-                            </ul>
-                        </div> 
-                    </nav>
-                    <nav class="mainmenu">
-                        <ul>
-                            <li><a href="javascript:;" class="active">Over Webbiker</a></li>
-                            <li><a href="javascript:;">Portfolio</a></li>
-                            <li><a href="javascript:;">Diensten</a></li>
-                            <li><a href="javascript:;">Contact</a></li>
+        <!-- <div class="wrapper"> -->
+            <header class="header">
+                <!-- <nav class="submenu">
+                    <div>
+                        <ul class="submenu__mobile">
+                             <li><a href="javascript:;" id="open-button"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-menu"></use></svg></a></li>
+                         </ul>     
+                        <ul class="submenu__social">
+                            <li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-twitter"></use></svg></a></li>
+                            <li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-facebook"></use></svg></a></li>
+                            <li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-google-plus"></use></svg></a></li>
+                            <li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-linkedin"></use></svg></a></li>
                         </ul>
-                        <a href="/" class="logo">
-                            <svg viewBox="0 0 229 232" class="logo__shield">
-                                <use xlink:href="/assets/img/gui/sprite.svg#logo-shield"></use>
-                            </svg>
-                            <svg viewBox="0 0 138 104" class="logo__bike">
-                                <use xlink:href="/assets/img/gui/sprite.svg#logo-bike"></use>
-                            </svg>
-                            <svg viewBox="0 0 357 123" class="logo__text">
-                                <use xlink:href="/assets/img/gui/sprite.svg#logo-text"></use>
-                            </svg>
-                            <svg viewBox="0 0 229 232" class="logo__shadow">
-                                <use xlink:href="/assets/img/gui/sprite.svg#logo-shadow"></use>
-                        </a>
-                    </nav>
+                        <ul class="submenu__language">
+                            <li><a href="javascript:;" class="active">NL</a></li>
+                            <li><a href="javascript:;">EN</a></li>
+                        </ul>
+                    </div> 
+                </nav>
+                <nav class="mainmenu">
+                    <ul>
+                        <li><a href="javascript:;" class="active">Over Webbiker</a></li>
+                        <li><a href="javascript:;">Portfolio</a></li>
+                        <li><a href="javascript:;">Diensten</a></li>
+                        <li><a href="javascript:;">Contact</a></li>
+                    </ul>
+                    <a href="/" class="logo">
+                        <svg viewBox="0 0 229 232" class="logo__shield">
+                            <use xlink:href="/assets/img/gui/sprite.svg#logo-shield"></use>
+                        </svg>
+                        <svg viewBox="0 0 138 104" class="logo__bike">
+                            <use xlink:href="/assets/img/gui/sprite.svg#logo-bike"></use>
+                        </svg>
+                        <svg viewBox="0 0 357 123" class="logo__text">
+                            <use xlink:href="/assets/img/gui/sprite.svg#logo-text"></use>
+                        </svg>
+                        <svg viewBox="0 0 229 232" class="logo__shadow">
+                            <use xlink:href="/assets/img/gui/sprite.svg#logo-shadow"></use>
+                    </a>
+                </nav> -->
 
-                    <div class="clouds clouds__horizon"></div>
-                    <div class="clouds clouds__cloudone"></div>
-                    <div class="clouds clouds__cloudtwo"></div>
-                    <div class="clouds clouds__cloudthree"></div>
-                </header>
+                <div class="clouds clouds__horizon"></div>
+                <div class="clouds clouds__cloudone"></div>
+                <div class="clouds clouds__cloudtwo"></div>
+            </header>
 
+            <main class="main">
                 <h1>
                     <img src="/assets/img/header/avatar.jpg" alt="Joost Brommert - Webdesigner" class="avatar">
                     Joost Brommert
                     <small>Webdesigner</small>
                 </h1>
-
-                <section class="main">
-                    <p>Morem ipsum dolor sit amet, consectetur adipisicing elit. Ut molestias, voluptatum cumque aut nostrum, nisi sint voluptates illo repellat quis voluptate iure quos dolorum ullam incidunt vitae quisquam tempore possimus, et sequi perspiciatis aliquid omnis distinctio deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, pariatur quia debitis nobis esse, molestias eum aperiam quae minus inventore magnam eligendi veritatis facilis assumenda nesciunt hic obcaecati. Dolorem eius a aliquam, corporis nihil nobis itaque culpa, quod qui recusandae quibusdam laboriosam obcaecati, reiciendis, nesciunt voluptate aspernatur. Iure quos recusandae dolore? Voluptas itaque error, cupiditate deleniti quibusdam vel! Incidunt aliquam facere odio blanditiis suscipit aspernatur?</p>
+                <article>
+                    <p><strong>Morem ipsum dolor sit amet, consectetur adipisicing elit. Ut molestias, voluptatum cumque aut nostrum, nisi sint voluptates illo repellat quis voluptate iure quos dolorum ullam incidunt vitae quisquam tempore possimus, et sequi perspiciatis aliquid omnis distinctio deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, pariatur quia debitis nobis esse, molestias eum aperiam quae minus inventore magnam eligendi veritatis facilis assumenda nesciunt hic obcaecati.</strong></p>
+                    <p>Dolorem eius a aliquam, corporis nihil nobis itaque culpa, quod qui recusandae quibusdam laboriosam obcaecati, reiciendis, nesciunt voluptate aspernatur. Iure quos recusandae dolore? Voluptas itaque error, cupiditate deleniti quibusdam vel! Incidunt aliquam facere odio blanditiis suscipit aspernatur?</p>
                     <p>Proin vel egestas ex. Morbi efficitur libero eget libero mattis posuere pretium vel ligula. Vivamus efficitur ipsum risus, nec tincidunt nulla eleifend vehicula. Pellentesque consequat enim vulputate felis consequat, a placerat lorem luctus. Phasellus sagittis tristique varius. Nulla tellus arcu, consectetur ac ullamcorper vel, porttitor at sem. Nullam id egestas ex, eget rhoncus dolor. Integer eget purus pulvinar, feugiat erat in, luctus mi. Fusce odio ipsum, luctus eu orci quis, tincidunt rhoncus leo. Proin aliquet, metus at mollis tincidunt, dui quam facilisis nunc, quis congue felis mi sed libero. Sed a dignissim nisl. Morbi vitae magna fermentum, auctor tellus vel, pulvinar metus.</p>
                     <blockquote>
                         You can't handle the thruth!    
@@ -110,23 +92,13 @@
                     <h4>Lorem ipsum dolor sit amet</h4>
                     <p>Voluptates esse, maiores saepe quis assumenda, eum odio atque consequatur blanditiis minima beatae similique placeat quas velit, quos ad provident commodi dolor eos quibusdam dolorum debitis fuga? Placeat quod, odit fuga quo sequi assumenda magni officia laudantium quam corporis, amet ullam tempora repellat porro architecto nemo eaque nisi laboriosam nam.</p>
                     <p><button>test button</button></p>
-                </section>        
-                <footer>
-                    <div class="footerContent">
-                        Footer
-                    </div>
-                </footer>
-            </div>
-        </div>
-
+                </article>        
+            </main>
+            <footer>
+                &copy;<?php echo Date("Y"); ?> Webbiker - Algemene Voorwaarden - Kvk 17224071
+            </footer>
+        <!-- </div> -->
 
         <script src="/assets/js/app-min.js"></script>
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
     </body>
 </html>

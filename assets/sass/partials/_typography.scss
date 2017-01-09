@@ -7,7 +7,6 @@
          url('/assets/fonts/homestead-regular-webfont.svg#homestead_regularregular') format('svg');
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
@@ -21,85 +20,15 @@
     font-style: normal;
 }
 
-// @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400,700);
-@import url(http://fonts.googleapis.com/css?family=Roboto:400,700);
-// @font-face {
-//     font-family: 'Droid Sans';
-//     src: url('/assets/fonts/droidsans-webfont.eot');
-//     src: url('/assets/fonts/droidsans-webfont.eot?#iefix') format('embedded-opentype'),
-//          url('/assets/fonts/droidsans-webfont.woff') format('woff'),
-//          url('/assets/fonts/droidsans-webfont.ttf') format('truetype'),
-//          url('/assets/fonts/droidsans-webfont.svg#droid_sansregular') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
-
-// @font-face {
-//     font-family: 'droid bold';
-//     src: url('/assets/fonts/droidsans-bold-webfont.eot');
-//     src: url('/assets/fonts/droidsans-bold-webfont.eot?#iefix') format('embedded-opentype'),
-//          url('/assets/fonts/droidsans-bold-webfont.woff') format('woff'),
-//          url('/assets/fonts/droidsans-bold-webfont.ttf') format('truetype'),
-//          url('/assets/fonts/droidsans-bold-webfont.svg#droid_sansbold') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-// }
-
-@font-face {
-    font-family: 'sfns_displaybold';
-    src: url('/assets/fonts/system_san_francisco_display_bold-webfont.eot');
-    src: url('/assets/fonts/system_san_francisco_display_bold-webfont.eot?#iefix') format('embedded-opentype'),
-         // url('/assets/fonts/system_san_francisco_display_bold-webfont.woff2') format('woff2'),
-         url('/assets/fonts/system_san_francisco_display_bold-webfont.woff') format('woff'),
-         url('/assets/fonts/system_san_francisco_display_bold-webfont.ttf') format('truetype'),
-         url('/assets/fonts/system_san_francisco_display_bold-webfont.svg#sfns_displaybold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-// @font-face {
-//     font-family: 'sfns_displayregular';
-//     src: url('/assets/fonts/system_san_francisco_display_regular-webfont.eot');
-//     src: url('/assets/fonts/system_san_francisco_display_regular-webfont.eot?#iefix') format('embedded-opentype'),
-//          url('/assets/fonts/system_san_francisco_display_regular-webfont.woff2') format('woff2'),
-//          url('/assets/fonts/system_san_francisco_display_regular-webfont.woff') format('woff'),
-//          url('/assets/fonts/system_san_francisco_display_regular-webfont.ttf') format('truetype'),
-//          url('/assets/fonts/system_san_francisco_display_regular-webfont.svg#sfns_displayregular') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-
-// }
-
-// @font-face {
-//     font-family: 'sfns_displaythin';
-//     src: url('/assets/fonts/system_san_francisco_display_thin-webfont.eot');
-//     src: url('/assets/fonts/system_san_francisco_display_thin-webfont.eot?#iefix') format('embedded-opentype'),
-//          url('/assets/fonts/system_san_francisco_display_thin-webfont.woff2') format('woff2'),
-//          url('/assets/fonts/system_san_francisco_display_thin-webfont.woff') format('woff'),
-//          url('/assets/fonts/system_san_francisco_display_thin-webfont.ttf') format('truetype'),
-//          url('/assets/fonts/system_san_francisco_display_thin-webfont.svg#sfns_displaythin') format('svg');
-//     font-weight: normal;
-//     font-style: normal;
-
-// }
-
-@font-face {
-    font-family: 'sfns_displayultralight';
-    src: url('/assets/fonts/system_san_francisco_display_ultralight-webfont.eot');
-    src: url('/assets/fonts/system_san_francisco_display_ultralight-webfont.eot?#iefix') format('embedded-opentype'),
-         // url('/assets/fonts/system_san_francisco_display_ultralight-webfont.woff2') format('woff2'),
-         url('/assets/fonts/system_san_francisco_display_ultralight-webfont.woff') format('woff'),
-         url('/assets/fonts/system_san_francisco_display_ultralight-webfont.ttf') format('truetype'),
-         url('/assets/fonts/system_san_francisco_display_ultralight-webfont.svg#sfns_displayultralight') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:300,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,700);
 
 html {
-    font-family: 'sfns_displayultralight', _sans;
+    font-family: 'Roboto', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 300;
+
     line-height: 1;
     color: $black;
 }
@@ -144,37 +73,40 @@ h1 {
 }
 
 .main {
+    line-height: 1.6;
+
     h2, h3, h4, p, ul {
         margin-left: 20%;
         margin-right: 20%;
     }
+
     h2 {
         color: $xdgreen;
         font-size: rem-calc(24);
-        line-height: rem-calc(36);
+        // line-height: rem-calc(36);
     }
 
     h3 {
         color: $dgreen;
         font-size: rem-calc(18);
-        line-height: rem-calc(30);
+        // line-height: rem-calc(30);
     }
 
     h4 {
         color: $black;
         font-size: rem-calc(14);
-        line-height: rem-calc(24);
+        // line-height: rem-calc(24);
     }
 
     p {
-        font-size: rem-calc(16);
-        line-height: rem-calc(24);
+        font-size: rem-calc(18);
+        // line-height: rem-calc(24);
         margin-bottom: 24px;
     }
 
     blockquote {
         float: left;
-        font-family: homestead, _sans;
+        font-family: homestead, sans-serif;
         font-size: rem-calc(24);
         margin: 6px 30px 24px 10%;
         // border-top: 4px solid $lgreen;
@@ -192,11 +124,12 @@ h1 {
 
     strong,
     b {
-        font-family: 'sfns_displaybold', _sans;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 700;
     }
 
     p:first-child:first-letter {
-        font-family: 'sfns_displaybold', _sans;
+        font-family: homestead, sans-serif;
         border-bottom: 4px solid $dgreen;
         color: $lgreen;
         font-size: rem-calc(60); //4rem

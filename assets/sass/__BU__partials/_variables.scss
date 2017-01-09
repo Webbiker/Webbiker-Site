@@ -17,10 +17,8 @@ $lgreen: 	#d9e3cf;
 /-----------------------------------------------------------------------------------*/
 $rem-base: 16px !default;
 $max-width: 1140px;
-$main-width: 800px;
 $speed: 300ms;
 $easing: ease-in-out;
-$base-font-size: 1rem; //0.875rem
 
 /*-----------------------------------------------------------------------------------/
 / Media queries
@@ -35,8 +33,8 @@ $base-font-size: 1rem; //0.875rem
 $small-range: (0em, 640px);
 $medium-range: (641px, 1024px);
 $large-range: (1025px, 1440px);
-$xlarge-range: (1441px, 1599px);
-$xxlarge-range: (1600px, 1599999984px);
+$xlarge-range: (1441px, 1920px);
+$xxlarge-range: (1921px, 1599999984px);
 
 $screen: "only screen";
 

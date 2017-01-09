@@ -13,11 +13,13 @@
 	left: 0;
 	bottom: 3px;
 	background: url(/assets/img/gui/horizon-drybrush.svg);
+	// background-size: auto;
 	width: 100%;
 	height: 30px;
 	&:after {
 		content: " ";
 		background: url(/assets/img/gui/header-bikers-wide.png) no-repeat bottom center;
+		background-size: 100%;
 		display: block;
 		width: 100%;
 		height: 185px;
@@ -26,39 +28,25 @@
 	}
 }
 
-@media #{$small-up}{
-	.clouds__horizon {
-		&:after {
-			background-size: 100%;
-		}
-	}
-}
-
-@media #{$xxlarge-only}{
-	.clouds__horizon {
-		&:after {
-			background-size: 1600px 185px;
-		}
-	}
-}
-
-// .clouds__cloudone {
-// 	background:url("/assets/img/header/cloud-1.png") repeat-x;
-// 	opacity: 0.8;
-// 	top:0;
-// 	animation:clouds 100s linear infinite;
-// 	display: none;
-// }
-
 .clouds__cloudone {
-	background:url("/assets/img/header/cloud-left.png") repeat-x;
-	opacity: 0.7;
-	top:30px;
-	animation:clouds 120s linear infinite;
+	background:url("/assets/img/header/cloud-1.png") repeat-x;
+	background-size: 50%;
+	opacity: 0.8;
+	top:0;
+	animation:clouds 100s linear infinite;
 }
 
 .clouds__cloudtwo {
-	background:url("/assets/img/header/cloud-right.png") repeat-x;
+	background:url("/assets/img/header/cloud-2.png") repeat-x;
+	background-size: 50%;
+	opacity: 0.7;
+	top:0;
+	animation:clouds 150s linear infinite;
+}
+
+.clouds__cloudthree {
+	background:url("/assets/img/header/cloud-3.png") repeat-x;
+	background-size: 50%;
 	opacity: 0.9;
 	top:0px;
 	animation:clouds 200s linear infinite;
