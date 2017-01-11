@@ -9,18 +9,6 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'lavanderia';
-    src: url('/assets/fonts/lavanderia_sturdy-webfont.eot');
-    src: url('/assets/fonts/lavanderia_sturdy-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/lavanderia_sturdy-webfont.woff') format('woff'),
-         url('/assets/fonts/lavanderia_sturdy-webfont.ttf') format('truetype'),
-         url('/assets/fonts/lavanderia_sturdy-webfont.svg#lavanderia_sturdysturdy') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans:300,700);
 @import url(http://fonts.googleapis.com/css?family=Roboto:300,700);
 
 html {
@@ -53,7 +41,9 @@ h1 {
     max-width: $max-width - 120px;
     position: relative;
     color: $xdgreen;
-    font-size: rem-calc(36);
+    @include font-size(36px);
+    line-height: 1;
+    // @include line-height(36px);
 
     .avatar {
         width: 100px;
@@ -68,7 +58,7 @@ h1 {
     small {
         display: block;
         color: $black;
-        font-size: rem-calc(24);
+        @include font-size(24px);
     }
 }
 
@@ -82,35 +72,30 @@ h1 {
 
     h2 {
         color: $xdgreen;
-        font-size: rem-calc(24);
-        // line-height: rem-calc(36);
+        @include font-size(24px);
     }
 
     h3 {
         color: $dgreen;
-        font-size: rem-calc(18);
-        // line-height: rem-calc(30);
+        @include font-size(18px);
     }
 
     h4 {
         color: $black;
-        font-size: rem-calc(14);
-        // line-height: rem-calc(24);
+        @include font-size(14px);
     }
 
     p {
-        font-size: rem-calc(18);
-        // line-height: rem-calc(24);
+        @include font-size(18px);
         margin-bottom: 24px;
     }
 
     blockquote {
         float: left;
         font-family: homestead, sans-serif;
-        font-size: rem-calc(24);
-        margin: 6px 30px 24px 10%;
-        // border-top: 4px solid $lgreen;
-        // border-bottom: 4px solid $lgreen;
+        @include font-size(24px);
+        @include line-height(24px);
+        margin: 6px 24px 24px 10%;
         border-style: solid;
         border-width: 12px 0;
         border-image: url('/assets/img/gui/grid-pattern.png') 24 fill repeat;
@@ -132,11 +117,11 @@ h1 {
         font-family: homestead, sans-serif;
         border-bottom: 4px solid $dgreen;
         color: $lgreen;
-        font-size: rem-calc(60); //4rem
-        line-height: rem-calc(58);
+        @include font-size(60px); //4rem
+        @include line-height(58px);
         float: left;
-        margin: -7px 10px 0px -11px;
-        padding: 10px 10px 0 10px;
+        margin: 9px 10px 0px 0;
+        padding: 6px 10px 0 13px;
         background: $dgreen;
         display: block;
         border-radius: 4px;
@@ -162,7 +147,7 @@ h1 {
 @media #{$small-only} {
     h1 {
         margin:0 20px 40px 20px;
-        font-size: rem-calc(24);
+        @include font-size(24px);
         padding-left: 80px;
         max-width: $max-width - 80px;
         small {

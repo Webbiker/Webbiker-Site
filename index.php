@@ -68,6 +68,7 @@
                 <div class="clouds clouds__horizon"></div>
                 <div class="clouds clouds__cloudone"></div>
                 <div class="clouds clouds__cloudtwo"></div>
+                <div class="clouds clouds__cloudthree"></div>
             </header>
 
             <main class="main">
