@@ -50,8 +50,8 @@
 	display: block;
 	padding: 0.8em;
 	font-weight: 700;
-	font-size: rem-calc(18);
-    font-family: 'sfns_displaybold', _sans;
+	@include font-size(18px);
+    // font-family: 'sfns_displaybold', _sans;
 }
 
 /* Morph Shape */

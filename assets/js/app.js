@@ -4,11 +4,17 @@
 
 	$(document).ready(function(){
 
-		$(".wrapper__content").scroll(function() {
+
+
+		$(window).scroll(function() {
+			// console.log('wrapper is scrolling');
 
 			// behaviour of the main navigation on scroll
-			var height = $(".wrapper__content").scrollTop();
-			if(height  > 40) {
+			var wrapperPos = $('.wrapper').scrollTop();
+			// console.log('height: '+ wrapperPos);
+
+
+			if(wrapperPos  > 40) {
 				$('.header').addClass('header--sticky');
 			} else {
 				$('.header').removeClass('header--sticky');
@@ -16,3 +22,9 @@
 
 		});
 	});
+
+	$(window).scroll(function(){
+		var wrapperPos = $('p').scrollTop();
+		console.log('scrolling: '+wrapperPos);
+	});
+

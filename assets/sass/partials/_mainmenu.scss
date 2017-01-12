@@ -3,7 +3,7 @@
 	height: 80px;
 	width: 100%;
 	margin-top: 40px;
-	font-size: rem-calc(14);
+	@include font-size(14px);
 	position: fixed;
 	z-index: 1000;
 	transition: all $easing $speed;
@@ -32,9 +32,8 @@
 				display: block;
 				padding: 31px 20px;
 				position: relative;
-				font-weight: 700;
-				font-size: rem-calc(18);
-		        font-family: 'sfns_displaybold', _sans;
+				font-weight: $bold;
+				@include font-size(18px);
 				transition: all $easing $speed;
 				&:after {
 					position: absolute;
@@ -87,7 +86,7 @@
 				}
 				a {
 					padding: 14px 10px;
-					font-size: rem-calc(12);
+					@include font-size(12px);
 					transition: all $easing $speed;
 					&:hover {
 						color: $black;

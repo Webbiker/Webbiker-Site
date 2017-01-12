@@ -8,7 +8,8 @@ module.exports = function(grunt) {
     uglify: {
       build: {
         src: [
-          'assets/js/libs/jquery-1.12.0.min.js',
+          'assets/js/vendor/jquery-3.1.1.js',
+          'assets/js/vendor/snap.svg-min.js',
           'assets/js/*.js'
         ],
         dest: 'assets/js/build/app.min.js'
