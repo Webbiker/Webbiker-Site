@@ -39,7 +39,7 @@
 	background-position: 10% 0;
 	// background-size: 50%;
 	opacity: 0.9;
-	top:-80px;
+	top:-50px;
 	animation:clouds 200s linear infinite;
 }
 .clouds__cloudthree {
@@ -47,7 +47,7 @@
 	background-position: 50% 0;
 	// background-size: 50%;
 	opacity: 0.9;
-	top:0;
+	top:70px;
 	animation:clouds 200s linear infinite;
 }
 
@@ -60,17 +60,27 @@
 }
 
 @media #{$small-only}{
+	.clouds__horizon {
+		&:after {
+			background-size: 200%;
+			background-position: bottom left;
+		}
+	}
+
 	.clouds__cloudone {
 		background-size: 700px;
 		top: 0;
+		animation:clouds 30s linear infinite;
 	}
 	.clouds__cloudtwo {
 		background-size: 1600px;
 		top: -70px;
+		animation:clouds 60s linear infinite;
 	}
 	.clouds__cloudthree {
 		background-size: 710px;
 		top: 20px;
+		animation:clouds 60s linear infinite;
 	}
 }
 
@@ -81,15 +91,6 @@
 		}
 	}
 }
-
-// .clouds__cloudone {
-// 	background:url("/assets/img/header/cloud-1.png") repeat-x;
-// 	opacity: 0.8;
-// 	top:0;
-// 	animation:clouds 100s linear infinite;
-// 	display: none;
-// }
-
 
 @keyframes clouds {
 	0% {

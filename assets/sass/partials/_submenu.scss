@@ -13,7 +13,7 @@
 			a {
 				color: $dgreen;
 				display: block;
-				font-weight: 400;
+				font-weight: $bold;
 				@include font-size(12px);
 
 				&:hover,
@@ -36,9 +36,10 @@
 	width: 20px;
 	height: 20px;
 	fill: $dgreen;
-	background-color: tint($dgreen, 30%);
+	background-color: lighten($dgreen, 10%);
 	border-radius: 50%;
 	padding: 4px;
+	overflow: visible;
 	margin: 6px 6px 0 0;
 	transition: all $easing $speed;
 }
@@ -53,8 +54,7 @@
 		padding: 8px 4px 0 4px;
 		text-align: center;
 		font-weight: bold;
-        // font-family: 'sfns_displaybold', _sans;
-		background-color: tint($dgreen, 30%);
+		background-color: lighten($dgreen, 10%);
 		color: $dgreen;
 		border-radius: 50%;
 		margin: 6px 0 0 6px;

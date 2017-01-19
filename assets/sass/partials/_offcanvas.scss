@@ -50,7 +50,7 @@
 	display: block;
 	padding: 0.8em;
 	font-weight: 700;
-	@include font-size(18px);
+	@include font-size($base-font-size);
     // font-family: 'sfns_displaybold', _sans;
 }
 

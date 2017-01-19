@@ -77,7 +77,7 @@ h1 {
 
     h3 {
         color: $dgreen;
-        @include font-size(18px);
+        @include font-size($base-font-size);
     }
 
     h4 {
@@ -86,7 +86,7 @@ h1 {
     }
 
     p {
-        @include font-size(18px);
+        @include font-size($base-font-size);
         margin-bottom: 24px;
     }
 
@@ -148,14 +148,14 @@ h1 {
     h1 {
         margin:0 20px 40px 20px;
         @include font-size(24px);
-        padding-left: 80px;
+        padding-left: 70px;
         max-width: $max-width - 80px;
         small {
             font-size: rem-calc(18);
         }
         .avatar {
-            width: 60px;
-            top: -30px;
+            width: 55px;
+            top: -18px;
         }
     }
     .main {
