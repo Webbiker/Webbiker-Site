@@ -5,7 +5,7 @@
 	margin-top: 40px;
 	@include font-size(14px);
 	position: fixed;
-	z-index: 1000;
+	z-index: 10;
 	transition: all $easing $speed;
 	ul {
 		max-width: $max-width;

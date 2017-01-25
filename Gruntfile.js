@@ -6,10 +6,16 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     uglify: {
+      options: {
+        sourceMap: true,
+        sourceMapName: 'assets/js/build/app.min.map'
+      },
       build: {
         src: [
-          'assets/js/vendor/jquery-3.1.1.js',
-          'assets/js/vendor/snap.svg-min.js',
+          // 'assets/js/vendor/jquery-3.1.1.js',
+          'assets/js/vendor/jquery-2.2.1.min.js',
+          // 'assets/js/vendor/jquery-1.8.0.min.js',
+          'assets/js/vendor/TweenMax.min.js',
           'assets/js/*.js'
         ],
         dest: 'assets/js/build/app.min.js'

@@ -23,6 +23,9 @@
 		<!--[if lt IE 10]>
 			<p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
 		<![endif]-->
+		<div id="preloader">	
+			<div id="loading"><?php include("assets/svg/loader.svg"); ?></div>
+		</div>
 		<div class="wrapper">
 			
 			<header class="header">
@@ -102,5 +105,6 @@
 			</footer>
 		</div>
 		<script src="/assets/js/build/app.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 	</body>
 </html>
