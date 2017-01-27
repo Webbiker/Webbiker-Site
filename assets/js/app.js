@@ -26,14 +26,10 @@ $(document).ready(function(){
 		$('body').on('touchmove', function(e) {
 		        e.preventDefault();
 		}, false);
-
-		console.log('open offcanvas');
 	});
 
 	$(document).on('click', '#offcanvas-close', function(){
 		$('.wrapper__offcanvas').removeClass('wrapper__offcanvas--open');
 		$('body').unbind('touchmove');
-
-		console.log('close offcanvas');
 	});
 });

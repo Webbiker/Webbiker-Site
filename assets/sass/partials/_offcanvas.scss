@@ -46,7 +46,8 @@
 }
 
 .offcanvas__list {
-	align-self: center;
+	margin-top: 10vh;
+	align-self: top;
 	text-align: center;
 }
 
@@ -66,7 +67,7 @@
 		top: 42px;
 		content: "";
 		height: 5px;
-		background: $dgreen;
+		background: $black;
 		width: 20%;
 		margin-left: -10%;
 		left: 50%;
@@ -88,36 +89,22 @@
 	position: fixed;
 	bottom: 20px;
 	z-index: 10;
-	// left: 40px;
-	// width: 100%;
-	li {
-		float: left;
-	}
+
+	left: 0;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+
 }
 
-/* Morph Shape */
-.morph-shape {
-	position: absolute;
-	width: 120px;
-	height: 100%;
-	top: 0;
-	right: 0;
+.offcanvas__icon {
+	width: 30px;
+	height: 30px;
 	fill: $grey;
-	z-index: 1000;
-}
-
-/* Shown menu */
-.show-menu .wrapper__offcanvas {
-	transform: translate3d(0,0,0);
-}
-
-.show-menu .wrapper__content {
-	left: 100px;
-	transition-delay: 0.1s;
-}
-
-.show-menu .wrapper__content::before {
-	opacity: 1;
-	transition: opacity 0.3s;
-	transform: translate3d(0,0,0);
+	background-color: $dgreen;
+	border-radius: 50%;
+	padding: 4px;
+	overflow: visible;
+	margin: 8px 6px 0 0;
+	transition: all $easing $speed;
 }

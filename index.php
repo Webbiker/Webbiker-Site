@@ -33,16 +33,16 @@
 			<div class="wrapper__offcanvas">
 			    <nav class="offcanvas">
 			        <div class="offcanvas__list">
-			            <a href="javascript:;">Over Webbiker</a>
+			            <a href="javascript:;" class="active">Over Webbiker</a>
 			            <a href="javascript:;">Portfolio</a>
 			            <a href="javascript:;">Diensten</a>
 			            <a href="javascript:;">Contact</a>
 			        </div>
 					<ul class="offcanvas__social">
-						<li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-twitter"></use></svg></a></li>
-						<li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-facebook"></use></svg></a></li>
-						<li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-google-plus"></use></svg></a></li>
-						<li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-linkedin"></use></svg></a></li>
+						<li><a href="javascript:;"><svg class="offcanvas__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-twitter"></use></svg></a></li>
+						<li><a href="javascript:;"><svg class="offcanvas__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-facebook"></use></svg></a></li>
+						<li><a href="javascript:;"><svg class="offcanvas__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-google-plus"></use></svg></a></li>
+						<li><a href="javascript:;"><svg class="offcanvas__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-linkedin"></use></svg></a></li>
 					</ul>
 			    </nav>
 			    <button class="close-button" id="offcanvas-close">Close Menu</button>
