@@ -37,21 +37,62 @@
 /* Menu */
 .offcanvas {
 	background: $grey;
-	width: calc(100% - 120px);
-	height: 100%;
-	padding: 2em 1em;
+	width: 100%;
+	height: 100vh;
+	// padding-top: 40px;
+	display: flex;
+	justify-content: center;
+	position: relative;
 }
 
 .offcanvas__list {
-	width: 280px;
+	align-self: center;
+	text-align: center;
 }
 
 .offcanvas__list a {
 	display: block;
-	padding: 0.8em;
+	padding: 20px;
 	font-weight: 700;
 	@include font-size($base-font-size);
+	position: relative;
+	color: $white;
     // font-family: 'sfns_displaybold', _sans;
+
+
+	&:after {
+		position: absolute;
+		z-index: 10;
+		top: 42px;
+		content: "";
+		height: 5px;
+		background: $dgreen;
+		width: 20%;
+		margin-left: -10%;
+		left: 50%;
+		transition: all $easing $speed;
+	}
+
+	&:hover:after,
+	&.active:after {
+		// top: 60px;
+		width: 20%;
+		margin-left: -10%;
+		left: 50%;
+		transition: all $easing $speed;
+		background: $lgreen;
+	}
+}
+
+.offcanvas__social {
+	position: fixed;
+	bottom: 20px;
+	z-index: 10;
+	// left: 40px;
+	// width: 100%;
+	li {
+		float: left;
+	}
 }
 
 /* Morph Shape */

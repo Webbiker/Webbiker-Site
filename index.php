@@ -15,8 +15,8 @@
 		<link rel="apple-touch-icon-precomposed" href="/assets/img/favicon/apple-touch-icon-72x72-precomposed.png" sizes="72x72">
 		<link rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico">
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
 		<script src="/assets/js/build/loader.min.js"></script>
 
 		<link rel="stylesheet" href="/assets/css/loader.css">
@@ -30,11 +30,34 @@
 		</div>
 		<div class="wrapper">
 			
+			<div class="wrapper__offcanvas">
+			    <nav class="offcanvas">
+			        <div class="offcanvas__list">
+			            <a href="javascript:;">Over Webbiker</a>
+			            <a href="javascript:;">Portfolio</a>
+			            <a href="javascript:;">Diensten</a>
+			            <a href="javascript:;">Contact</a>
+			        </div>
+					<ul class="offcanvas__social">
+						<li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-twitter"></use></svg></a></li>
+						<li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-facebook"></use></svg></a></li>
+						<li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-google-plus"></use></svg></a></li>
+						<li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-linkedin"></use></svg></a></li>
+					</ul>
+			    </nav>
+			    <button class="close-button" id="offcanvas-close">Close Menu</button>
+<!-- 			    <div class="morph-shape" id="morph-shape" data-morph-open="M-1,0h101c0,0,0-1,0,395c0,404,0,405,0,405H-1V0z">
+			        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 800" preserveAspectRatio="none">
+			            <path d="M-1,0h101c0,0-97.833,153.603-97.833,396.167C2.167,627.579,100,800,100,800H-1V0z"/>
+			        </svg>
+			    </div> -->
+			</div>
+
 			<header class="header">
 				<nav class="submenu">
 					<div>
 						<ul class="submenu__mobile">
-							 <li><a href="javascript:;" id="open-button"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-menu"></use></svg></a></li>
+							 <li><a href="javascript:;" id="offcanvas-open"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-menu"></use></svg></a></li>
 						</ul>     
 						<ul class="submenu__social">
 							<li><a href="javascript:;"><svg class="submenu__icon"><use xlink:href="/assets/img/gui/sprite.svg#icon-twitter"></use></svg></a></li>
