@@ -86,11 +86,35 @@
 	}
 }
 
-@media #{$small-only} {
+@media #{$small} {
 	.mainmenu {
 		height: 0;
-		ul {		
-			display: none;
+		width: auto;
+		left: 50%;
+		margin-left: -70px;
+		ul {
+			margin: 0 auto 0 auto;
+			li {
+				display: none;
+				&:nth-child(3) {
+					display: block;
+					a {
+						padding: 0;
+						&:after {
+							content: none;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.header--sticky {
+		.mainmenu {
+			margin-left: -45px;
+			ul {
+				margin: -40px auto 0 auto;
+			}
 		}
 	}
 }

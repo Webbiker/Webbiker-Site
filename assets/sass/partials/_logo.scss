@@ -13,61 +13,25 @@
 
 .header--sticky {
 	.logo {
-		// margin-left: -45px;
 		width: 90px;
 		margin: -22px auto 0 auto;
-		// top: -45px;
 		transition: all $easing $speed;
 	}
-	// .logo__shield {
-	// 	width: 50px;
-	// 	margin: 0 20px;
-	// 	transition: all $easing $speed;
-	// }
-	// .logo__bike {
-	// 	width: 26px;
-	// 	margin-left: -13px;
-	// 	top: 14px;
-	// 	transition: all $easing $speed;
-	// }
-	// .logo__text {
-	// 	width: 90px;
-	// 	margin-top: -16px;
-	// 	transition: all $easing $speed;
-	// }
-	// .logo__shadow {
-	// 	width: 100px;
-	// 	top: -10px;
-	// 	transition: all $easing $speed;
-	// }
 }
 
 @media #{$small-only}{
 	.logo {
-		// margin-left: -45px;
-		width: 90px;
-		// top: -45px;
+		margin: -10px auto 0 auto !important;
+		width: 140px;
 		transition: all $easing $speed;
 	}
-	// .logo__shield {
-	// 	width: 50px;
-	// 	margin: 0 20px;
-	// 	transition: all $easing $speed;
-	// }
-	// .logo__bike {
-	// 	width: 26px;
-	// 	margin-left: -13px;
-	// 	top: 14px;
-	// 	transition: all $easing $speed;
-	// }
-	// .logo__text {
-	// 	width: 90px;
-	// 	margin-top: -16px;
-	// 	transition: all $easing $speed;
-	// }
-	// .logo__shadow {
-	// 	width: 100px;
-	// 	top: -10px;
-	// 	transition: all $easing $speed;
-	// }
+
+	.header--sticky {
+		.logo {
+			// margin: -10px auto 0 auto !important;
+			width: 90px;
+			// transition: all $easing $speed;
+		}
+	}
+
 }

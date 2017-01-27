@@ -6,20 +6,20 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
 
     uglify: {
+      js: {
+        files : {
+          'assets/js/build/app.min.js' : [
+            'assets/js/app.js'
+          ],
+          'assets/js/build/loader.min.js' : [
+            'assets/js/loader.js',
+          ]
+        }
+      },
       options: {
         sourceMap: true,
         sourceMapName: 'assets/js/build/app.min.map'
       },
-      build: {
-        src: [
-          // 'assets/js/vendor/jquery-3.1.1.js',
-          'assets/js/vendor/jquery-2.2.1.min.js',
-          // 'assets/js/vendor/jquery-1.8.0.min.js',
-          'assets/js/vendor/TweenMax.min.js',
-          'assets/js/*.js'
-        ],
-        dest: 'assets/js/build/app.min.js'
-      }
     },
 
     postcss: {
@@ -42,6 +42,7 @@ module.exports = function(grunt) {
           style: 'compressed'            // nested, compact, compressed, expanded
         },
         files: {                         // Dictionary of files
+          'assets/css/loader.css': 'assets/sass/loader.scss',
           'assets/css/screen.css': 'assets/sass/screen.scss'
         }
       }
@@ -53,9 +54,6 @@ module.exports = function(grunt) {
         tasks: ['sass', 'postcss']
       },
       scripts: {
-          // options: {
-          //   livereload: true                  // Set to false if you don't have the LiveReload extension/plugin for your browser
-          // },
           files: ['assets/js/*.js'],
           tasks: ['uglify']
       }

@@ -37,32 +37,32 @@
 .clouds__cloudtwo {
 	background:url("/assets/img/header/cloud-5.png") repeat-x;
 	background-position: 10% 0;
-	// background-size: 50%;
 	opacity: 0.9;
 	top:-50px;
 	animation:clouds 200s linear infinite;
 }
+
 .clouds__cloudthree {
 	background:url("/assets/img/header/cloud-4.png") repeat-x;
 	background-position: 50% 0;
-	// background-size: 50%;
 	opacity: 0.9;
 	top:70px;
 	animation:clouds 200s linear infinite;
 }
 
-@media #{$small-up}{
+@media #{$xsmall-only}{
 	.clouds__horizon {
 		&:after {
-			background-size: 100%;
+			background-size: 200%;
+			background-position: bottom left;
 		}
 	}
 }
 
-@media #{$small-only}{
+@media #{$small}{
 	.clouds__horizon {
 		&:after {
-			background-size: 200%;
+			background-size: 150%;
 			background-position: bottom left;
 		}
 	}

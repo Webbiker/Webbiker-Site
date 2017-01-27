@@ -15,9 +15,11 @@
 		<link rel="apple-touch-icon-precomposed" href="/assets/img/favicon/apple-touch-icon-72x72-precomposed.png" sizes="72x72">
 		<link rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico">
 
-		<!-- <link rel="stylesheet" href="/assets/css/default.css"> -->
-		<link rel="stylesheet" href="/assets/css/screen.css">
-		<!-- <script src="/assets/bower_components/modernizr/modernizr.js"></script> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+		<script src="/assets/js/build/loader.min.js"></script>
+
+		<link rel="stylesheet" href="/assets/css/loader.css">
 	</head>
 	<body>
 		<!--[if lt IE 10]>
@@ -97,14 +99,16 @@
 					<p>Voluptates esse, maiores saepe quis assumenda, eum odio atque consequatur blanditiis minima beatae similique placeat quas velit, quos ad provident commodi dolor eos quibusdam dolorum debitis fuga? Placeat quod, odit fuga quo sequi assumenda magni officia laudantium quam corporis, amet ullam tempora repellat porro architecto nemo eaque nisi laboriosam nam.</p>
 					<h4>Lorem ipsum dolor sit amet</h4>
 					<p>Voluptates esse, maiores saepe quis assumenda, eum odio atque consequatur blanditiis minima beatae similique placeat quas velit, quos ad provident commodi dolor eos quibusdam dolorum debitis fuga? Placeat quod, odit fuga quo sequi assumenda magni officia laudantium quam corporis, amet ullam tempora repellat porro architecto nemo eaque nisi laboriosam nam.</p>
-					<p><button>test button</button></p>
+					<p>
+						<a href="javascript:;" class="button">Verzenden</a>
+					</p>
 				</article>        
 			</main>
 			<footer>
-				&copy;<?php echo Date("Y"); ?> Webbiker - Algemene Voorwaarden - Kvk 17224071
+				&copy;<?php echo Date("Y"); ?> Webbiker
 			</footer>
 		</div>
 		<script src="/assets/js/build/app.min.js"></script>
-		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+		<link rel="stylesheet" href="/assets/css/screen.css">
 	</body>
 </html>

@@ -72,13 +72,21 @@
 	display:none;
 	a {
 		.submenu__icon {
-			background-color: $white;
-			color: $dgreen;
+			background-color: transparent;
+			border-radius: 0;
+			fill: $white;
+		}
+	
+		&:hover {
+			.submenu__icon {
+				background-color: transparent !important;
+				fill: $white;
+			}
 		}
 	}
 }
 
-@media #{$small-only} {
+@media #{$small} {
 	.submenu__mobile {
 		display:block; 
 	}
