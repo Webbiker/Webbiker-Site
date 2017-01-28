@@ -37,13 +37,20 @@ h1, h2, h3, h4 {
 
 h1 {
     margin: 10px 20% 80px 20%;
-    padding-left: 120px;
-    max-width: $max-width - 120px;
-    position: relative;
+    max-width: $max-width;
     color: $xdgreen;
     @include font-size(36px);
     line-height: 1;
-    // @include line-height(36px);
+    small {
+        display: block;
+        color: $black;
+        @include font-size(24px);
+    }
+}
+h1.heading--avatar {
+    padding-left: 120px;
+    max-width: $max-width - 120px;
+    position: relative;
 
     .avatar {
         width: 100px;
@@ -54,11 +61,6 @@ h1 {
         z-index: 9;
         border-radius: 999px;
         border: 5px solid $dgreen;
-    }
-    small {
-        display: block;
-        color: $black;
-        @include font-size(24px);
     }
 }
 

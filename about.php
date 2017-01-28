@@ -1,5 +1,5 @@
 <?php include("assets/includes/inc.header.php"); ?>
-<h1 class="heading--avatar">
+<h1>
 	<img src="/assets/img/header/avatar.jpg" alt="Joost Brommert - Webdesigner" class="avatar">
 	Joost Brommert
 	<small>Webdesigner</small>

@@ -1,8 +1,7 @@
 <?php include("assets/includes/inc.header.php"); ?>
-<h1 class="heading--avatar">
-	<img src="/assets/img/header/avatar.jpg" alt="Joost Brommert - Webdesigner" class="avatar">
-	Joost Brommert
-	<small>Webdesigner</small>
+<h1>
+	Diensten
+	<small>Lorem ipsum dolor sit amet.</small>
 </h1>
 <p><strong>Morem ipsum dolor sit amet, consectetur adipisicing elit. Ut molestias, voluptatum cumque aut nostrum, nisi sint voluptates illo repellat quis voluptate iure quos dolorum ullam incidunt vitae quisquam tempore possimus, et sequi perspiciatis aliquid omnis distinctio deleniti. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam, pariatur quia debitis nobis esse, molestias eum aperiam quae minus inventore magnam eligendi veritatis facilis assumenda nesciunt hic obcaecati.</strong></p>
 <p>Dolorem eius a aliquam, corporis nihil nobis itaque culpa, quod qui recusandae quibusdam laboriosam obcaecati, reiciendis, nesciunt voluptate aspernatur. Iure quos recusandae dolore? Voluptas itaque error, cupiditate deleniti quibusdam vel! Incidunt aliquam facere odio blanditiis suscipit aspernatur?</p>
