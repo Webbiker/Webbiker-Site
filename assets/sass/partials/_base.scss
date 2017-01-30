@@ -43,10 +43,17 @@ body {
 }
 
 .main {
-	flex: 1 1 auto;
+	flex: 1 1 100vh;
 	align-self: center;
 	padding: 0 0 40px 0;
 	article {	
 		max-width: $main-width;
+		transition: all $easing $speed;
+
+		&.article__hide {
+			opacity: 0;
+			visibility: hidden;			
+			transition: all $easing $speed;
+		}
 	}
 }

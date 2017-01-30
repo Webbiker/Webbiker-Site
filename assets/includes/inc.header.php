@@ -12,6 +12,7 @@
         <link rel="apple-touch-icon-precomposed" href="/assets/img/favicon/apple-touch-icon-72x72-precomposed.png" sizes="72x72">
         <link rel="icon" type="image/x-icon" href="/assets/img/favicon/favicon.ico">
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.2.1/jquery.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
         <script src="/assets/js/build/loader.min.js"></script>
@@ -78,5 +79,5 @@
                 <div class="clouds clouds__cloudthree"></div>
             </header>
 
-            <main class="main">
-                <article>
+            <main class="main" id="main-content">
+                <article id="main-guts">

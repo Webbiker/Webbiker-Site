@@ -9,7 +9,9 @@ module.exports = function(grunt) {
       js: {
         files : {
           'assets/js/build/app.min.js' : [
-            'assets/js/app.js'
+            'assets/js/partials/sticky-header.js',
+            'assets/js/partials/offcanvas.js',
+            'assets/js/partials/dynamic-page.js'
           ],
           'assets/js/build/loader.min.js' : [
             'assets/js/loader.js',
@@ -54,7 +56,7 @@ module.exports = function(grunt) {
         tasks: ['sass', 'postcss']
       },
       scripts: {
-          files: ['assets/js/*.js'],
+          files: ['assets/js/*.js', 'assets/js/partials/*.js'],
           tasks: ['uglify']
       }
     },

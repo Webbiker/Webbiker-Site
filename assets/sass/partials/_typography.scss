@@ -115,7 +115,7 @@ h1.heading--avatar {
         font-weight: 700;
     }
 
-    p:first-child:first-letter {
+    p:first-of-type:first-letter {
         font-family: homestead, sans-serif;
         border-bottom: 4px solid $dgreen;
         color: $lgreen;
@@ -128,6 +128,12 @@ h1.heading--avatar {
         display: block;
         border-radius: 4px;
         text-align: center;
+    }
+
+    img { 
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
     }
 }
 
