@@ -14,7 +14,7 @@ module.exports = function(grunt) {
             'assets/js/partials/dynamic-page.js'
           ],
           'assets/js/build/loader.min.js' : [
-            'assets/js/loader.js',
+            'assets/js/partials/loader.js',
           ]
         }
       },

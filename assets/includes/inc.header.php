@@ -23,9 +23,8 @@
         <!--[if lt IE 10]>
             <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
-        <div id="preloader">    
-            <div id="loading"><?php include("assets/svg/loader.svg"); ?></div>
-        </div>
+        <div class="loader__spinner" id="loading"><?php include("assets/svg/loader.svg"); ?></div>
+        <div class="loader__overlay" id="overlay"></div>
         <div class="wrapper">
             
             <div class="wrapper__offcanvas">
@@ -80,4 +79,4 @@
             </header>
 
             <main class="main" id="main-content">
-                <article id="main-guts">
+                <article>

@@ -1,5 +1,5 @@
 .header { 
-	flex: 1 0 auto;
+	flex: 0 0 400px;
 	min-height: 400px;
 	position: relative;
 	background: linear-gradient(to bottom, $lblue 0%, $lgreen 100%);
@@ -20,12 +20,14 @@
 
 @media #{$medium-only} {
 	.header {
+		flex: 0 0 320px;
 		min-height:320px;
 	}
 }
 
 @media #{$small-only} {
 	.header {
+		flex: 0 0 240px;
 		min-height:240px;
 	}
 }

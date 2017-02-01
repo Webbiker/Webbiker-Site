@@ -1,56 +1,52 @@
 /* -------------------------
    Dynamic page function
    ------------------------- */
+
 $(function() {
-    if (Modernizr.history) {
-		// hijack the nav click event
-		$(".mainmenu, .offcanvas__list").delegate("a", "click", function(e) {
-			e.preventDefault();
 
-			_href = $(this).attr("href");
-			// change the url without a page refresh and add a history entry.
-			history.pushState(null, null, _href);
+    if(Modernizr.history){
+	    var $mainContent = $("#main-content"),
+	        $speed   = 300;
+	        
+	    $(".mainmenu, .offcanvas").delegate("a", "click", function() {
+	        _link = $(this).attr("href");
+	        history.pushState(null, null, _link);
+	        loadContent(_link);
 
-			// load the content
-			loadContent(_href);
-		});
-    } else {
-        // console.log('history is not supported; nothing fancy here');
-    }
-});
+            $(".mainmenu a, .offcanvas a").removeClass("active");
+            $(this).addClass("active");
 
-// set up some variables
-var $mainContent = $("#main-content"),
-    $pageWrap    = $("#page-wrap"),
-    baseHeight   = 0,
-    $el;
+	        return false;
+	    });
 
-// calculate wrapper heights to prevent jumping when loading new content
-// $pageWrap.height($pageWrap.height());
-// baseHeight = $pageWrap.height() - $mainContent.height();
+	    function loadContent(href){
+	    	$mainContent.addClass('main__hide').delay($speed).queue(function(){
+				$("#loading").addClass('loader__spinner--content').fadeIn($speed, function(){
 
-var loadContent = function(href){
-	console.log('load content');
+			        $mainContent.load(href + " #main-content > *", function(responseData, status, xhr) {
+						$('article *').load(function(){
+    	    				$("#loading").fadeOut($speed, function(){
+						    	$mainContent.removeClass('main__hide');
+						    	$(this).removeClass('loader__spinner--content');
+    	    				})
+						});
 
-	$("#main-guts")
-		.addClass('article__hide', function(){
-		// .fadeOut(500, function() { // fade out the content of the current page
-			console.log('main content');
-		// $mainContent.hide().load(href + " #main-guts", function() { // load the contents of whatever href is
-		// 	$mainContent.fadeIn(200, function() {
-		// 		// $pageWrap.animate({
-		// 		// 	height: baseHeight + $mainContent.height() + "px";
-		// 		// });
-		// 	});
-	  
-			$(".mainmenu a, .offcanvas__list a").removeClass("active");
-			$(".mainmenu a[href$='" + href + "'], .offcanvas__list a[href$='" + href + "']").addClass("active");
+			            // console.log("href: "+href);
+			            // $(".mainmenu a").removeClass("active");
+			            // $(".mainmenu a[href='"+href+"]").addClass("active");
+			        })
+				});
 
-		// });
-	});
-}
+		        $(this).dequeue();
+	    	});
+	    }
+	    
+	    $(window).bind('popstate', function(){
+	       _link = location.pathname.replace(/^.*[\\\/]/, ''); //get filename only
+	       loadContent(_link);
+	    });
 
-$(window).bind("popstate", function() {
-	link = location.pathname.replace(/^.*[\\/]/, ""); // get filename only
-	loadContent(link);
+	} // otherwise, history is not supported, so nothing fancy here.
+
+    
 });
