@@ -13,4 +13,11 @@ $(document).ready(function(){
 		$('.wrapper__offcanvas').removeClass('wrapper__offcanvas--open');
 		$('body').unbind('touchmove');
 	});
+
+	$(document).on('click', '.offcanvas a', function(){
+		setTimeout(function(){ 
+			$('.wrapper__offcanvas').removeClass('wrapper__offcanvas--open');
+			$('body').unbind('touchmove');
+		}, 300);
+	});
 });

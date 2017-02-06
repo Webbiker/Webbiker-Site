@@ -8,13 +8,16 @@ $(function() {
 	    var $mainContent = $("#main-content"),
 	        $speed   = 300;
 	        
-	    $(".mainmenu, .offcanvas").delegate("a", "click", function() {
+	    $(document).delegate("a:not([target='_blank'])", "click", function() {
 	        _link = $(this).attr("href");
-	        history.pushState(null, null, _link);
-	        loadContent(_link);
 
-            $(".mainmenu a, .offcanvas a").removeClass("active");
-            $(this).addClass("active");
+	        if(_link!=="javascript:;"){        	
+		        history.pushState(null, null, _link);
+		        loadContent(_link);
+
+			    $(".mainmenu a, .offcanvas a").removeClass("active");
+		    	$(".mainmenu a[href='"+_link+"'], .offcanvas a[href='"+_link+"']").addClass("active");
+	        }
 
 	        return false;
 	    });
@@ -28,18 +31,18 @@ $(function() {
     	    				$("#loading").fadeOut($speed, function(){
 						    	$mainContent.removeClass('main__hide');
 						    	$(this).removeClass('loader__spinner--content');
+
+
+
     	    				})
 						});
-
-			            // console.log("href: "+href);
-			            // $(".mainmenu a").removeClass("active");
-			            // $(".mainmenu a[href='"+href+"]").addClass("active");
 			        })
 				});
 
 		        $(this).dequeue();
 	    	});
 	    }
+
 	    
 	    $(window).bind('popstate', function(){
 	       _link = location.pathname.replace(/^.*[\\\/]/, ''); //get filename only
@@ -50,3 +53,7 @@ $(function() {
 
     
 });
+
+function activePage(page){
+	console.log("page: "+page);
+}

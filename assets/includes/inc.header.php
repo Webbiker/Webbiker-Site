@@ -30,7 +30,7 @@
             <div class="wrapper__offcanvas">
                 <nav class="offcanvas">
                     <div class="offcanvas__list">
-                        <a href="/about.php" class="active">Over Webbiker</a>
+                        <a href="/about.php">Over Webbiker</a>
                         <a href="/portfolio.php">Portfolio</a>
                         <a href="/services.php">Diensten</a>
                         <a href="/contact.php">Contact</a>
@@ -65,11 +65,11 @@
                 </nav>
                 <nav class="mainmenu">
                     <ul>
-                        <li><a href="/about.php" class="active">Over Webbiker</a></li>
-                        <li><a href="/portfolio.php">Portfolio</a></li>
-                        <li><a href="/" class="logo"><img src="/assets/img/header/logo.svg" alt="Webbiker logo"></a></li>
-                        <li><a href="/services.php">Diensten</a></li>
-                        <li><a href="/contact.php">Contact</a></li>
+                        <li><a href="/about.php" rel="about">Over Webbiker</a></li>
+                        <li><a href="/portfolio.php" rel="portfolio">Portfolio</a></li>
+                        <li><a href="/" rel="home" class="logo"><img src="/assets/img/header/logo.svg" alt="Webbiker logo"></a></li>
+                        <li><a rel="services" href="/services.php">Diensten</a></li>
+                        <li><a rel="contact" href="/contact.php">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="clouds clouds__horizon"></div>
