@@ -5,40 +5,30 @@
       <small>{{ page?.subtitle || 'Neem contact op' }}</small>
     </h1>
     <div v-if="page?.content" v-html="page.content" />
-    <template v-else>
+    <form @submit.prevent="submitForm">
       <p>
-        Proin vel egestas ex. Morbi efficitur libero eget libero mattis posuere pretium vel ligula. Vivamus
-        efficitur ipsum risus, nec tincidunt nulla eleifend vehicula. Pellentesque consequat enim vulputate
-        felis consequat, a placerat lorem luctus.
+        <label for="name">Naam</label><br>
+        <input id="name" v-model="form.name" type="text" name="name" required>
       </p>
       <p>
-        <img src="/media/placeholders/rogueone_onesheetA.jpg" alt="Rogue One">
+        <label for="email">E-mail</label><br>
+        <input id="email" v-model="form.email" type="email" name="email" required>
       </p>
-      <form @submit.prevent="submitForm">
-        <p>
-          <label for="name">Naam</label><br>
-          <input id="name" v-model="form.name" type="text" name="name" required>
-        </p>
-        <p>
-          <label for="email">E-mail</label><br>
-          <input id="email" v-model="form.email" type="email" name="email" required>
-        </p>
-        <p>
-          <label for="message">Bericht</label><br>
-          <textarea id="message" v-model="form.message" name="message" rows="5" required />
-        </p>
-        <p>
-          <button type="submit" class="button">Verzenden</button>
-        </p>
-      </form>
-    </template>
+      <p>
+        <label for="message">Bericht</label><br>
+        <textarea id="message" v-model="form.message" name="message" rows="5" required />
+      </p>
+      <p>
+        <button type="submit" class="button">Verzenden</button>
+      </p>
+    </form>
   </div>
 </template>
 
 <script setup lang="ts">
 const { fetchSingle } = useStrapi()
 const { data } = await fetchSingle('contact')
-const page = computed(() => (data.value as any)?.data?.attributes ?? null)
+const page = computed(() => data.value?.data ?? null)
 
 const form = reactive({ name: '', email: '', message: '' })
 

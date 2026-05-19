@@ -1,15 +1,15 @@
 export interface StrapiImage {
-  data?: {
-    attributes?: {
-      url: string
-      alternativeText?: string
-      width?: number
-      height?: number
-    }
-  }
+  id: number
+  documentId: string
+  url: string
+  alternativeText?: string
+  width?: number
+  height?: number
 }
 
-export interface StrapiAttributes {
+export interface StrapiData {
+  id: number
+  documentId: string
   title?: string
   subtitle?: string
   content?: string
@@ -20,18 +20,19 @@ export interface StrapiAttributes {
   publishedAt?: string
 }
 
-export interface StrapiItem {
-  id: number
-  attributes: StrapiAttributes
+export interface StrapiPortfolioItem extends StrapiData {
+  title: string
+  url?: string
+  year?: number
 }
 
-export interface StrapiSingleResponse<T = StrapiAttributes> {
-  data: { id: number; attributes: T }
+export interface StrapiSingleResponse<T = StrapiData> {
+  data: T
   meta: Record<string, unknown>
 }
 
-export interface StrapiCollectionResponse<T = StrapiAttributes> {
-  data: Array<{ id: number; attributes: T }>
+export interface StrapiCollectionResponse<T = StrapiData> {
+  data: T[]
   meta: {
     pagination: { page: number; pageSize: number; pageCount: number; total: number }
   }

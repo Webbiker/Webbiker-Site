@@ -31,7 +31,6 @@ export default defineNuxtConfig({
 
   nitro: {
     publicAssets: [
-      { dir: '../assets', baseURL: '/assets' },
       { dir: '../media', baseURL: '/media' }
     ]
   },
@@ -39,8 +38,6 @@ export default defineNuxtConfig({
   vite: {
     vue: {
       template: {
-        // Assets live in the parent /assets/ dir served by Nitro at runtime —
-        // tell Vite not to try to resolve them as module imports at build time.
         transformAssetUrls: false
       }
     }
