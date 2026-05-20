@@ -22,6 +22,7 @@ npx create-strapi-app@latest . --quickstart
 | Name           | API ID           | Fields                              |
 |----------------|------------------|-------------------------------------|
 | Portfolio Item | `portfolio-item` | title, subtitle, description, image |
+| Navigation Item| `navigation-item`| title, url, order, isExternal, openInNewTab |
 
 ## Environment
 

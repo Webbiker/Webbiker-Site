@@ -71,6 +71,7 @@ h1, h2, h3, h4 { font-family: homestead, sans-serif; }
 h1 {
   margin: 10px 20% 80px 20%;
   max-width: 1140px;
+  width: 100%;
   color: #739888;
   font-size: 2.25rem;
   line-height: 1;
@@ -301,12 +302,15 @@ h1.heading--avatar .avatar {
 .mainmenu ul {
   max-width: 1140px;
   margin: 0 auto;
-  display: flex;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: minmax(0, 1fr);
+  justify-items: center;
+  align-items: center;
   transition: all ease-in-out 300ms;
 }
 .mainmenu ul li {
   transition: all ease-in-out 300ms;
-  flex: 1 1 auto;
   text-align: center;
 }
 .mainmenu ul li a {
@@ -317,6 +321,12 @@ h1.heading--avatar .avatar {
   font-weight: 700;
   font-size: 1.125rem;
   transition: all ease-in-out 300ms;
+}
+.mainmenu ul li a:not(.logo) { 
+  margin-top: -22px;
+}
+.mainmenu ul li a.logo {
+  padding: 0;
 }
 .mainmenu ul li a:after {
   position: absolute;
@@ -333,11 +343,18 @@ h1.heading--avatar .avatar {
 .mainmenu ul li a:hover:after,
 .mainmenu ul li a.active:after {
   top: 60px;
+  left: 50%;
+}
+.mainmenu ul li a:hover:after {
+  width: 100%;
+  left: 0%;
+}
+.mainmenu ul li a.active:after {
   width: 20%;
   margin-left: -10%;
   left: 50%;
 }
-.mainmenu ul li:nth-of-type(3) a:after { content: none; }
+.mainmenu ul li a.logo:after { content: none; }
 
 /* Sticky header state */
 .header--sticky .mainmenu {

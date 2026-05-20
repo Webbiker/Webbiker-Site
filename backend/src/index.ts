@@ -7,6 +7,8 @@ const PUBLIC_ACTIONS = [
   'api::contact.contact.find',
   'api::portfolio-item.portfolio-item.find',
   'api::portfolio-item.portfolio-item.findOne',
+  'api::navigation-item.navigation-item.find',
+  'api::navigation-item.navigation-item.findOne',
 ];
 
 export default {

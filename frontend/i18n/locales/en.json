@@ -1,0 +1,26 @@
+{
+  "nav": {
+    "about": "About Webbiker",
+    "portfolio": "Portfolio",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "contact": {
+    "nameLabel": "Name",
+    "emailLabel": "E-mail",
+    "messageLabel": "Message",
+    "sendButton": "Send",
+    "thanks": "Thank you for your message!"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "My work"
+  },
+  "meta": {
+    "home": "Webbiker.nl – Joost Brommert, Web Developer",
+    "about": "About Webbiker – Webbiker.nl",
+    "services": "Services – Webbiker.nl",
+    "portfolio": "Portfolio – Webbiker.nl",
+    "contact": "Contact – Webbiker.nl"
+  }
+}

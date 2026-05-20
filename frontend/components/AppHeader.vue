@@ -27,22 +27,46 @@
           </li>
         </ul>
         <ul class="submenu__language">
-          <li><NuxtLink to="/" class="active">NL</NuxtLink></li>
-          <li><NuxtLink to="/">EN</NuxtLink></li>
+          <li><NuxtLink :to="switchLocalePath('nl')" :class="{ active: locale === 'nl' }">NL</NuxtLink></li>
+          <li><NuxtLink :to="switchLocalePath('en')" :class="{ active: locale === 'en' }">EN</NuxtLink></li>
         </ul>
       </div>
     </nav>
     <nav class="mainmenu">
       <ul>
-        <li><NuxtLink to="/about" activeClass="active">Over Webbiker</NuxtLink></li>
-        <li><NuxtLink to="/portfolio" activeClass="active">Portfolio</NuxtLink></li>
+        <template v-for="item in leftNavItems" :key="item.id">
+          <li>
+            <NuxtLink v-if="!item.isExternal" :to="item.url" activeClass="active">{{ item.title }}</NuxtLink>
+            <a
+              v-else
+              :href="item.url"
+              :target="item.openInNewTab ? '_blank' : undefined"
+              rel="noopener noreferrer"
+            >
+              {{ item.title }}
+            </a>
+          </li>
+        </template>
+
         <li>
           <NuxtLink to="/" class="logo" exactActiveClass="">
             <img src="/assets/img/header/logo.svg" alt="Webbiker logo">
           </NuxtLink>
         </li>
-        <li><NuxtLink to="/services" activeClass="active">Diensten</NuxtLink></li>
-        <li><NuxtLink to="/contact" activeClass="active">Contact</NuxtLink></li>
+
+        <template v-for="item in rightNavItems" :key="item.id">
+          <li>
+            <NuxtLink v-if="!item.isExternal" :to="item.url" activeClass="active">{{ item.title }}</NuxtLink>
+            <a
+              v-else
+              :href="item.url"
+              :target="item.openInNewTab ? '_blank' : undefined"
+              rel="noopener noreferrer"
+            >
+              {{ item.title }}
+            </a>
+          </li>
+        </template>
       </ul>
     </nav>
     <div class="clouds clouds__horizon" />
@@ -53,6 +77,21 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ isSticky: boolean }>()
+import type { StrapiNavigationItem } from '~/composables/useStrapi'
+
+const props = defineProps<{ isSticky: boolean; navItems: StrapiNavigationItem[] }>()
 defineEmits<{ openOffcanvas: [] }>()
+
+const { locale } = useI18n()
+const switchLocalePath = useSwitchLocalePath()
+
+const leftNavItems = computed(() => {
+  const split = Math.ceil(props.navItems.length / 2)
+  return props.navItems.slice(0, split)
+})
+
+const rightNavItems = computed(() => {
+  const split = Math.ceil(props.navItems.length / 2)
+  return props.navItems.slice(split)
+})
 </script>

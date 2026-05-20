@@ -2,10 +2,24 @@
   <div class="wrapper__offcanvas" :class="{ 'wrapper__offcanvas--open': isOpen }">
     <nav class="offcanvas">
       <div class="offcanvas__list">
-        <NuxtLink to="/about" @click="$emit('close')">Over Webbiker</NuxtLink>
-        <NuxtLink to="/portfolio" @click="$emit('close')">Portfolio</NuxtLink>
-        <NuxtLink to="/services" @click="$emit('close')">Diensten</NuxtLink>
-        <NuxtLink to="/contact" @click="$emit('close')">Contact</NuxtLink>
+        <template v-for="item in navItems" :key="item.id">
+          <NuxtLink
+            v-if="!item.isExternal"
+            :to="item.url"
+            @click="$emit('close')"
+          >
+            {{ item.title }}
+          </NuxtLink>
+          <a
+            v-else
+            :href="item.url"
+            :target="item.openInNewTab ? '_blank' : undefined"
+            rel="noopener noreferrer"
+            @click="$emit('close')"
+          >
+            {{ item.title }}
+          </a>
+        </template>
       </div>
       <ul class="offcanvas__social">
         <li>
@@ -30,6 +44,8 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ isOpen: boolean }>()
+import type { StrapiNavigationItem } from '~/composables/useStrapi'
+
+defineProps<{ isOpen: boolean; navItems: StrapiNavigationItem[] }>()
 defineEmits<{ close: [] }>()
 </script>

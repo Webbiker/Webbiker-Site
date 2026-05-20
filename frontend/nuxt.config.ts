@@ -1,7 +1,18 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  modules: ['@nuxtjs/tailwindcss'],
+  modules: ['@nuxtjs/tailwindcss', '@nuxtjs/i18n'],
+
+  i18n: {
+    locales: [
+      { code: 'nl', language: 'nl-NL', name: 'Nederlands', file: 'nl.json' },
+      { code: 'en', language: 'en-US', name: 'English', file: 'en.json' },
+    ],
+    defaultLocale: 'nl',
+    strategy: 'prefix_except_default',
+    lazy: true,
+    detectBrowserLanguage: false,
+  },
 
   css: ['~/assets/css/main.css'],
 

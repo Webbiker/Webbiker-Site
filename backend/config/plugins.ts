@@ -1,5 +1,13 @@
 import type { Core } from '@strapi/strapi';
 
-const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin => ({});
+const config = ({ env: _env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin => ({
+  i18n: {
+    enabled: true,
+    config: {
+      defaultLocale: 'nl',
+      locales: ['nl', 'en'],
+    },
+  },
+});
 
 export default config;

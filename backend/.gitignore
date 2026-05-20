@@ -6,3 +6,4 @@ build
 dist
 exports
 *.log
+.DS_Store

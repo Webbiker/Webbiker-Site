@@ -26,6 +26,14 @@ export interface StrapiPortfolioItem extends StrapiData {
   year?: number
 }
 
+export interface StrapiNavigationItem extends StrapiData {
+  title: string
+  url: string
+  order?: number
+  isExternal?: boolean
+  openInNewTab?: boolean
+}
+
 export interface StrapiSingleResponse<T = StrapiData> {
   data: T
   meta: Record<string, unknown>
@@ -42,17 +50,19 @@ export function useStrapi() {
   const config = useRuntimeConfig()
   const baseUrl = config.public.strapiUrl
 
-  function fetchSingle<T extends StrapiAttributes = StrapiAttributes>(endpoint: string) {
+  function fetchSingle<T extends StrapiData = StrapiData>(endpoint: string, locale?: string) {
+    const localeParam = locale ? `&locale=${locale}` : ''
     return useFetch<StrapiSingleResponse<T>>(
-      `${baseUrl}/api/${endpoint}?populate=*`,
-      { server: true }
+      `${baseUrl}/api/${endpoint}?populate=*${localeParam}`,
+      { server: true, key: `${endpoint}-${locale ?? 'default'}` }
     )
   }
 
-  function fetchCollection<T extends StrapiAttributes = StrapiAttributes>(endpoint: string) {
+  function fetchCollection<T extends StrapiData = StrapiData>(endpoint: string, query = 'populate=*', locale?: string) {
+    const localeParam = locale ? `&locale=${locale}` : ''
     return useFetch<StrapiCollectionResponse<T>>(
-      `${baseUrl}/api/${endpoint}?populate=*`,
-      { server: true }
+      `${baseUrl}/api/${endpoint}?${query}${localeParam}`,
+      { server: true, key: `${endpoint}-${locale ?? 'default'}` }
     )
   }
 
