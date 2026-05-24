@@ -12,7 +12,7 @@
 const { locale, t } = useI18n()
 const { renderMarkdown } = useMarkdown()
 const { fetchSingle } = useStrapi()
-const { data } = await fetchSingle('about', locale.value)
+const { data } = await fetchSingle('about', locale)
 const page = computed(() => data.value?.data ?? null)
 
 useHead({ title: t('meta.about') })

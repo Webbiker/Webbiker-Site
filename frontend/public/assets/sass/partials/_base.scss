@@ -5,7 +5,7 @@
 }
 
 body {
-	background: $white;
+	background: var(--white);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -19,12 +19,12 @@ body {
 }
 
 .wrapper__offcanvas a {
-	color: $lgreen;
+	color: var(--lgreen);
 }
 
 .wrapper__offcanvas a:hover,
 .wrapper__offcanvas a:focus {
-	color: $white;
+	color: var(--white);
 }
 
 .wrapper__offcanvas {
@@ -46,16 +46,15 @@ body {
 	flex: 1 0 auto;
 	align-self: center;
 	padding: 0 0 40px 0;
-	transition: all $easing $speed;
+	transition: all var(--easing) var(--speed);
 	&.main__hide {
 		opacity: 0;
-		visibility: hidden;			
-		transition: all $easing $speed;
+		visibility: hidden;
+		transition: all var(--easing) var(--speed);
 	}
 
-	article {	
-		max-width: $main-width;
-		transition: all $easing $speed;
-
+	article {
+		max-width: var(--main-width);
+		transition: all var(--easing) var(--speed);
 	}
 }

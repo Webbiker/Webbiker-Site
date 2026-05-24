@@ -36,7 +36,7 @@ const { fetchCollection } = useStrapi()
 const { data: menuData } = await fetchCollection<StrapiNavigationItem>(
   'navigation-items',
   'populate=*&sort=order:asc',
-  locale.value
+  locale
 )
 
 const fallbackNavItems = computed<StrapiNavigationItem[]>(() => [

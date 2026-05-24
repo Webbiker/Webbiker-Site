@@ -15,19 +15,19 @@ html {
     font-family: 'Roboto', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-weight: $normal;
+    font-weight: var(--normal);
 
     line-height: 1;
-    color: $black;
+    color: var(--black);
 }
 
 a {
-    color: $dgreen;
+    color: var(--dgreen);
     text-decoration: none;
-    transition: all ease-in $speed;
+    transition: all ease-in var(--speed);
     &:hover {
-        color: $lgreen;
-        transition: all ease-in $speed;
+        color: var(--lgreen);
+        transition: all ease-in var(--speed);
     }
 }
 
@@ -37,19 +37,19 @@ h1, h2, h3, h4 {
 
 h1 {
     margin: 10px 20% 80px 20%;
-    max-width: $max-width;
-    color: $xdgreen;
+    max-width: var(--max-width);
+    color: var(--xdgreen);
     @include font-size(36px);
     line-height: 1;
     small {
         display: block;
-        color: $black;
+        color: var(--black);
         @include font-size(24px);
     }
 }
 h1.heading--avatar {
     padding-left: 120px;
-    max-width: $max-width - 120px;
+    max-width: calc(var(--max-width) - 120px);
     position: relative;
 
     .avatar {
@@ -60,7 +60,7 @@ h1.heading--avatar {
         left:0 ;
         z-index: 9;
         border-radius: 999px;
-        border: 5px solid $dgreen;
+        border: 5px solid var(--dgreen);
     }
 }
 
@@ -73,17 +73,17 @@ h1.heading--avatar {
     }
 
     h2 {
-        color: $xdgreen;
+        color: var(--xdgreen);
         @include font-size(24px);
     }
 
     h3 {
-        color: $dgreen;
+        color: var(--dgreen);
         @include font-size($base-font-size);
     }
 
     h4 {
-        color: $black;
+        color: var(--black);
         @include font-size(14px);
     }
 
@@ -104,7 +104,7 @@ h1.heading--avatar {
 
         padding: 12px 0;
         text-transform: uppercase;
-        color: $dgreen;
+        color: var(--dgreen);
         max-width: 300px;
 
     }
@@ -117,20 +117,20 @@ h1.heading--avatar {
 
     p:first-of-type:first-letter {
         font-family: homestead, sans-serif;
-        border-bottom: 4px solid $dgreen;
-        color: $lgreen;
-        @include font-size(60px); //4rem
+        border-bottom: 4px solid var(--dgreen);
+        color: var(--lgreen);
+        @include font-size(60px);
         @include line-height(58px);
         float: left;
         margin: 9px 10px 0px 0;
         padding: 6px 10px 0 13px;
-        background: $dgreen;
+        background: var(--dgreen);
         display: block;
         border-radius: 4px;
         text-align: center;
     }
 
-    img { 
+    img {
         width: 100%;
         height: auto;
         border-radius: 8px;
@@ -157,7 +157,7 @@ h1.heading--avatar {
     h1 {
         margin:0 20px 40px 20px;
         @include font-size(23px);
-        max-width: $max-width - 80px;
+        max-width: calc(var(--max-width) - 80px);
 
         small {
             font-size: rem-calc(18);

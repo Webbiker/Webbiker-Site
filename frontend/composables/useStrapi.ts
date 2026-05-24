@@ -1,3 +1,5 @@
+import { isRef, type Ref } from 'vue'
+
 export interface StrapiImage {
   id: number
   documentId: string
@@ -50,19 +52,21 @@ export function useStrapi() {
   const config = useRuntimeConfig()
   const baseUrl = config.public.strapiUrl
 
-  function fetchSingle<T extends StrapiData = StrapiData>(endpoint: string, locale?: string) {
-    const localeParam = locale ? `&locale=${locale}` : ''
+  function fetchSingle<T extends StrapiData = StrapiData>(endpoint: string, locale?: Ref<string> | string) {
+    const loc = () => isRef(locale) ? locale.value : locale
+    const watchSources = isRef(locale) ? [locale as Ref<string>] : []
     return useFetch<StrapiSingleResponse<T>>(
-      `${baseUrl}/api/${endpoint}?populate=*${localeParam}`,
-      { server: true, key: `${endpoint}-${locale ?? 'default'}` }
+      () => `${baseUrl}/api/${endpoint}?populate=*${loc() ? `&locale=${loc()}` : ''}`,
+      { server: true, key: `${endpoint}-${loc() ?? 'default'}`, watch: watchSources }
     )
   }
 
-  function fetchCollection<T extends StrapiData = StrapiData>(endpoint: string, query = 'populate=*', locale?: string) {
-    const localeParam = locale ? `&locale=${locale}` : ''
+  function fetchCollection<T extends StrapiData = StrapiData>(endpoint: string, query = 'populate=*', locale?: Ref<string> | string) {
+    const loc = () => isRef(locale) ? locale.value : locale
+    const watchSources = isRef(locale) ? [locale as Ref<string>] : []
     return useFetch<StrapiCollectionResponse<T>>(
-      `${baseUrl}/api/${endpoint}?${query}${localeParam}`,
-      { server: true, key: `${endpoint}-${locale ?? 'default'}` }
+      () => `${baseUrl}/api/${endpoint}?${query}${loc() ? `&locale=${loc()}` : ''}`,
+      { server: true, key: `${endpoint}-${loc() ?? 'default'}`, watch: watchSources }
     )
   }
 

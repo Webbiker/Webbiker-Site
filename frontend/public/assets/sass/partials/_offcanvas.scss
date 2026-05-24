@@ -21,7 +21,7 @@
 	height: 100%;
 	top: 0;
 	left: 50%;
-	background: $lgreen;
+	background: var(--lgreen);
 }
 
 .close-button::before {
@@ -36,10 +36,9 @@
 
 /* Menu */
 .offcanvas {
-	background: $grey;
+	background: var(--grey);
 	width: 100%;
 	height: 100vh;
-	// padding-top: 40px;
 	display: flex;
 	justify-content: center;
 	position: relative;
@@ -57,7 +56,7 @@
 	font-weight: 700;
 	@include font-size($base-font-size);
 	position: relative;
-	color: $white;
+	color: var(--white);
 
 	&:after {
 		position: absolute;
@@ -65,21 +64,20 @@
 		top: 42px;
 		content: "";
 		height: 5px;
-		background: $black;
+		background: var(--black);
 		width: 20%;
 		margin-left: -10%;
 		left: 50%;
-		transition: all $easing $speed;
+		transition: all var(--easing) var(--speed);
 	}
 
 	&:hover:after,
 	&.active:after {
-		// top: 60px;
 		width: 20%;
 		margin-left: -10%;
 		left: 50%;
-		transition: all $easing $speed;
-		background: $lgreen;
+		transition: all var(--easing) var(--speed);
+		background: var(--lgreen);
 	}
 }
 
@@ -92,17 +90,16 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
-
 }
 
 .offcanvas__icon {
 	width: 30px;
 	height: 30px;
-	fill: $grey;
-	background-color: $dgreen;
+	fill: var(--grey);
+	background-color: var(--dgreen);
 	border-radius: 50%;
 	padding: 4px;
 	overflow: visible;
 	margin: 8px 6px 0 0;
-	transition: all $easing $speed;
+	transition: all var(--easing) var(--speed);
 }

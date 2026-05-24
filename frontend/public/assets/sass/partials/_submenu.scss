@@ -1,26 +1,26 @@
 .submenu {
 	height: 40px;
 	width: 100%;
-	background: $dgreen;
+	background: var(--dgreen);
 	position: fixed;
 	z-index: 10;
 	div {
-		max-width: $max-width;
+		max-width: var(--max-width);
 		margin: 0 auto;
 		padding: 0 10px;
 		li {
 			float: left;
 			a {
-				color: $dgreen;
+				color: var(--dgreen);
 				display: block;
-				font-weight: $bold;
+				font-weight: var(--bold);
 				@include font-size(12px);
 
 				&:hover,
 				&.active {
 					.submenu__icon {
-						background-color: $white;
-						transition: all $easing $speed;
+						background-color: var(--white);
+						transition: all var(--easing) var(--speed);
 					}
 				}
 			}
@@ -35,13 +35,13 @@
 .submenu__icon {
 	width: 24px;
 	height: 24px;
-	fill: $dgreen;
-	background-color: lighten($dgreen, 10%);
+	fill: var(--dgreen);
+	background-color: rgba(158, 190, 176, 1);
 	border-radius: 50%;
 	padding: 4px;
 	overflow: visible;
 	margin: 8px 6px 0 0;
-	transition: all $easing $speed;
+	transition: all var(--easing) var(--speed);
 }
 
 
@@ -54,16 +54,16 @@
 		padding: 7px 4px 0 4px;
 		text-align: center;
 		font-weight: bold;
-		background-color: lighten($dgreen, 10%);
-		color: $dgreen;
+		background-color: rgba(158, 190, 176, 1);
+		color: var(--dgreen);
 		border-radius: 50%;
 		margin: 8px 0 0 6px;
-		transition: all $easing $speed;
+		transition: all var(--easing) var(--speed);
 		&:hover,
 		&.active {
-			background-color: $white;
-			color: $dgreen;
-			transition: all $easing $speed;
+			background-color: var(--white);
+			color: var(--dgreen);
+			transition: all var(--easing) var(--speed);
 		}
 	}
 }
@@ -74,13 +74,13 @@
 		.submenu__icon {
 			background-color: transparent;
 			border-radius: 0;
-			fill: $white;
+			fill: var(--white);
 		}
-	
+
 		&:hover {
 			.submenu__icon {
 				background-color: transparent !important;
-				fill: $white;
+				fill: var(--white);
 			}
 		}
 	}
@@ -88,9 +88,9 @@
 
 @media #{$small} {
 	.submenu__mobile {
-		display:block; 
+		display:block;
 	}
-	.submenu__social { 
+	.submenu__social {
 		display: none;
 	}
 }

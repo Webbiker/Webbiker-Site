@@ -1,40 +1,40 @@
 .mainmenu {
-	background: rgba($dgreen, .2);
+	background: rgba(128, 169, 151, 0.2);
 	height: 80px;
 	width: 100%;
 	margin-top: 40px;
 	@include font-size(14px);
 	position: fixed;
 	z-index: 10;
-	transition: all $easing $speed;
+	transition: all var(--easing) var(--speed);
 	ul {
-		max-width: $max-width;
+		max-width: var(--max-width);
 		margin: 0 auto;
 		display: flex;
-		transition: all $easing $speed;
+		transition: all var(--easing) var(--speed);
 		li {
-			transition: all $easing $speed;
+			transition: all var(--easing) var(--speed);
 			flex: 1 1 auto;
 			text-align: center;
 			a {
-				color: $black;
+				color: var(--black);
 				display: block;
 				padding: 30px 10px 31px 10px;
 				position: relative;
-				font-weight: $bold;
+				font-weight: var(--bold);
 				@include font-size($base-font-size);
-				transition: all $easing $speed;
+				transition: all var(--easing) var(--speed);
 				&:after {
 					position: absolute;
 					z-index: 10;
 					top: 60px;
 					content: "";
 					height: 5px;
-					background: $dgreen;
+					background: var(--dgreen);
 					width: 0%;
 					margin-left: -0%;
 					left: 50%;
-					transition: all $easing $speed;
+					transition: all var(--easing) var(--speed);
 				}
 
 				&:hover:after,
@@ -43,7 +43,7 @@
 					width: 20%;
 					margin-left: -10%;
 					left: 50%;
-					transition: all $easing $speed;
+					transition: all var(--easing) var(--speed);
 				}
 			}
 			&:nth-of-type(3){
@@ -58,25 +58,25 @@
 .header--sticky {
 	.mainmenu {
 		height: 0px;
-		transition: all $easing $speed;
+		transition: all var(--easing) var(--speed);
 		ul {
 			max-width: 520px;
 			margin: -40px auto 0 auto;
-			transition: all $easing $speed;
+			transition: all var(--easing) var(--speed);
 
 			li {
-				transition: all $easing $speed;
+				transition: all var(--easing) var(--speed);
 				a {
 					padding: 14px 10px;
 					@include font-size(12px);
-					color: $white;
-					transition: all $easing $speed;
+					color: var(--white);
+					transition: all var(--easing) var(--speed);
 					&:hover {
-						color: $black;
+						color: var(--black);
 					}
 					&:after {
-						transition: all $easing $speed;
-						background-color: lighten($dgreen, 10%);
+						transition: all var(--easing) var(--speed);
+						background-color: rgba(158, 190, 176, 1);
 						height: 3px;
 						top: 30px;
 					}

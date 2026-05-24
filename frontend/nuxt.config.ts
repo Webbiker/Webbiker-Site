@@ -10,11 +10,29 @@ export default defineNuxtConfig({
     ],
     defaultLocale: 'nl',
     strategy: 'prefix_except_default',
-    lazy: true,
     detectBrowserLanguage: false,
+    customRoutes: 'config',
+    pages: {
+      about: {
+        nl: '/over-webbiker',
+        en: '/about-webbiker',
+      },
+      contact: {
+        nl: '/contact',
+        en: '/contact',
+      },
+      services: {
+        nl: '/diensten',
+        en: '/services',
+      },
+      work: {
+        nl: '/werk',
+        en: '/work',
+      },
+    },
   },
 
-  css: ['~/assets/css/main.css'],
+  css: ['~/assets/css/main.scss'],
 
   runtimeConfig: {
     public: {
@@ -34,16 +52,15 @@ export default defineNuxtConfig({
         { rel: 'icon', type: 'image/x-icon', href: '/assets/img/favicon/favicon.ico' },
         { rel: 'apple-touch-icon-precomposed', href: '/assets/img/favicon/apple-touch-icon-114x114-precomposed.png', sizes: '114x114' },
         { rel: 'apple-touch-icon-precomposed', href: '/assets/img/favicon/apple-touch-icon-72x72-precomposed.png', sizes: '72x72' },
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,700' }
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Roboto:300,700' },
+        { rel: 'preload', as: 'script', href: '/assets/js/vendor/gsap.min.js' },
+        { rel: 'preload', as: 'script', href: '/assets/js/loader-animation.js' },
+      ],
+      script: [
+        { src: '/assets/js/vendor/gsap.min.js', defer: true },
+        { src: '/assets/js/loader-animation.js', defer: true },
       ]
-    },
-    pageTransition: { name: 'page', mode: 'out-in' }
-  },
-
-  nitro: {
-    publicAssets: [
-      { dir: '../media', baseURL: '/media' }
-    ]
+    }
   },
 
   vite: {

@@ -29,7 +29,7 @@
 const { locale, t } = useI18n()
 const { renderMarkdown } = useMarkdown()
 const { fetchSingle } = useStrapi()
-const { data } = await fetchSingle('contact', locale.value)
+const { data } = await fetchSingle('contact', locale)
 const page = computed(() => data.value?.data ?? null)
 
 const form = reactive({ name: '', email: '', message: '' })

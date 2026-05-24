@@ -3,7 +3,7 @@
 	width: 180px;
 	height: auto;
 	margin: -60px auto 0 auto;
-	transition: all $easing $speed;
+	transition: all var(--easing) var(--speed);
 
 	img {
 		width: 100%;
@@ -15,7 +15,7 @@
 	.logo {
 		width: 90px;
 		margin: -22px auto 0 auto;
-		transition: all $easing $speed;
+		transition: all var(--easing) var(--speed);
 	}
 }
 
@@ -23,15 +23,12 @@
 	.logo {
 		margin: -10px auto 0 auto !important;
 		width: 140px;
-		transition: all $easing $speed;
+		transition: all var(--easing) var(--speed);
 	}
 
 	.header--sticky {
 		.logo {
-			// margin: -10px auto 0 auto !important;
 			width: 90px;
-			// transition: all $easing $speed;
 		}
 	}
-
 }

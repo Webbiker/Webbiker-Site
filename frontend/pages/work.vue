@@ -24,7 +24,7 @@ const config = useRuntimeConfig()
 const strapiUrl = config.public.strapiUrl
 
 const { fetchCollection } = useStrapi()
-const { data } = await fetchCollection('portfolio-items', 'populate=*', locale.value)
+const { data } = await fetchCollection('portfolio-items', 'populate=*', locale)
 const items = computed(() => data.value?.data ?? [])
 
 useHead({ title: t('meta.portfolio') })

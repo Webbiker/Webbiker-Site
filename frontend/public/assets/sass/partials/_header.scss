@@ -1,8 +1,8 @@
-.header { 
+.header {
 	flex: 0 0 400px;
 	min-height: 400px;
 	position: relative;
-	background: linear-gradient(to bottom, $lblue 0%, $lgreen 100%);
+	background: linear-gradient(to bottom, var(--lblue) 0%, var(--lgreen) 100%);
 	overflow: hidden;
 	&:after {
 		content: "";
